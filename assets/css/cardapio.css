@@ -1,0 +1,100 @@
+.cabecalhos {
+  color:#d7d7d7;
+  padding:18px;
+  font-family:'Bubblegum Sans', cursive;
+  font-size:56px;
+}
+
+.cardapio-body {
+  background-color:#d27440;
+  padding-top:43px;
+  height:auto;
+  max-height:100%;
+  display:block;
+}
+
+.opcoes-menu {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:auto;
+  margin-top:auto;
+  padding-left:33px;
+}
+
+.opcoes-item {
+  width:186px;
+  height:186px;
+}
+
+.texto-cardapio {
+  color:#d7d7d7;
+  font-size:22px;
+  padding-left:61px;
+}
+
+.cartoes {
+  width:56px;
+  height:46px;
+  margin-right:19px;
+}
+
+.cartoes-aceitos {
+  background-color:#d27440;
+  padding:35px;
+  padding-left:98px;
+  padding-bottom:auto;
+  padding-right:auto;
+  padding-top:auto;
+}
+
+#bebidas {
+  display:none;
+}
+
+#temaki {
+  display:none;
+}
+
+#opcoes-refrigerante {
+  color:rgb(227,228,230);
+  font-family:'Bubblegum Sans', cursive;
+}
+
+#menu {
+  display:none;
+}
+
+.descricao-opcoes {
+  color:rgb(245,246,247);
+  font-family:'Bubblegum Sans', cursive;
+  font-size:30px;
+}
+
+#niguiri {
+  display:block;
+}
+
+#sashimi {
+  display:none;
+}
+
+#gunkan {
+  display:none;
+}
+
+#yakisoba {
+  display:none;
+}
+
+#rollmaki {
+  display:none;
+}
+
+#combos {
+  display:none;
+}
+
+#variados {
+  display:none;
+}
+

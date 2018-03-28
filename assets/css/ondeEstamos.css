@@ -1,0 +1,22 @@
+#onde-estamos {
+  /*background-image:url("../../assets/img/background2.jpg");*/
+  /*background-repeat:no-repeat;*/
+  /*background-size:cover;*/
+}
+
+#mapa {
+  margin-bottom:36px;
+}
+
+#endereco-horario {
+  background-color:rgba(201,198,198,0.76);
+  font-family:'Averia Sans Libre', cursive;
+  font-size:23px;
+}
+
+#texto-opcoes {
+  color:rgb(241,241,242);
+  font-size:34px;
+  font-family:'Architects Daughter', cursive;
+}
+
