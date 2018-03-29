@@ -24,6 +24,7 @@
 .opcoes-item {
   width:186px;
   height:186px;
+  margin:14px;
 }
 
 .texto-cardapio {
@@ -61,7 +62,7 @@
 }
 
 #menu {
-  display:none;
+  display:block;
 }
 
 .descricao-opcoes {
@@ -71,7 +72,7 @@
 }
 
 #niguiri {
-  display:block;
+  display:none;
 }
 
 #sashimi {
