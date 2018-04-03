@@ -1,3 +1,4 @@
+/*--------------------- Corpo do cardápio ----------------------*/
 .cabecalhos {
   color:#d7d7d7;
   padding:18px;
@@ -14,17 +15,23 @@
 }
 
 .opcoes-menu {
+  margin:auto;
   margin-left:auto;
   margin-right:auto;
   margin-bottom:auto;
   margin-top:auto;
+  padding:auto;
   padding-left:33px;
+  width:auto;
 }
 
 .opcoes-item {
   width:186px;
   height:186px;
-  margin:14px;
+  margin-left:17px;
+  margin-bottom:20px;
+  margin-right:auto;
+  margin-top:auto;
 }
 
 .texto-cardapio {
@@ -32,22 +39,7 @@
   font-size:22px;
   padding-left:61px;
 }
-
-.cartoes {
-  width:56px;
-  height:46px;
-  margin-right:19px;
-}
-
-.cartoes-aceitos {
-  background-color:#d27440;
-  padding:35px;
-  padding-left:98px;
-  padding-bottom:auto;
-  padding-right:auto;
-  padding-top:auto;
-}
-
+/* ------------- Divs do cardápio ----------------*/
 #bebidas {
   display:none;
 }
@@ -97,5 +89,37 @@
 
 #variados {
   display:none;
+}
+
+.botaoVoltar {
+}
+
+/*------------------ Cartões aceitos ----------------------*/
+
+.cartoes {
+  width:56px;
+  height:46px;
+  margin-right:19px;
+}
+
+.cartoes-aceitos {
+  background-color:#d27440;
+  padding:35px;
+  padding-left:98px;
+  padding-bottom:auto;
+  padding-right:auto;
+  padding-top:auto;
+}
+/*-------------------- Resoluções ----------------------*/
+
+@media (min-width:320px){
+    .opcoes-item {
+      margin-left:36px;
+    }
+}
+@media (max-width:375px){
+    .opcao-item{
+      margin-left: 50px;
+    }
 }
 
