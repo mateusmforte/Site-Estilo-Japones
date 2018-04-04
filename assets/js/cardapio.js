@@ -1,4 +1,4 @@
-var menu = document.querySelector('.opcoes-menu');
+var menu = document.querySelector('#menu');
 var botaoVoltar = document.querySelector('#botaoVoltar');
 var textoOpcoes = document.querySelector('#texto-opcoes');
 function mostraOpcoesSabor(event){
@@ -23,15 +23,16 @@ function mostraOpcoesSabor(event){
    for(var i = 0; i<opcoesDisponiveis.length; i++){
        if(opcaoEscolhida == opcoesDisponiveis[i]){
            var opcao = document.querySelector(divsCardapio[i]);
-           opcao.style.display = "block";
            menu.style.display = "none";
+           textoOpcoes.style.display = "none";
+           opcao.style.display = "block";
        }
    }
 }
 menu.addEventListener("click",mostraOpcoesSabor);
-textoOpcoes.style.display = "none";
-botaoVoltar.addEventListener("click",function(){
+
+/*botaoVoltar.addEventListener("click",function(){
     menu.style.display = "block";
     opcao.style.display = "none";
-});
+});*/
 
