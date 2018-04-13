@@ -6,7 +6,7 @@
 }
 
 .cardapio-body {
-  background-color:#d27440;
+  background-color:#413934;
   padding-top:43px;
   height:auto;
   max-height:100%;
@@ -89,11 +89,11 @@
 }
 
 .cartoes-aceitos {
-  background-color:#d27440;
+  background-color:#413934;
   padding:35px;
   padding-left:98px;
-  padding-bottom:auto;
-  padding-right:auto;
-  padding-top:auto;
+  /*padding-bottom:auto;*/
+  /*padding-right:auto;*/
+  /*padding-top:auto;*/
 }
 
