@@ -16,8 +16,8 @@
 }
 
 .opcoes-item {
-  width:auto;
-  height:auto;
+  width:186px;
+  height:186px;
   margin:9px 32px;
 }
 
@@ -71,7 +71,7 @@
 }
 
 #combos {
-  display:none;
+  display:block;
 }
 
 #variados {
@@ -117,5 +117,27 @@
 .fade-in {
   opacity:2;
   transition:0.3s;
+}
+
+#img-bebidas {
+  width:287px;
+  height:287px;
+}
+
+@media (max-width: 425px) {
+  #img-bebidas {
+    display:none;
+  }
+}
+
+#img-combo {
+  width:319px;
+  height:225px;
+}
+
+#opcoes-combo {
+  color:rgb(227,228,230);
+  font-family:'Bubblegum Sans', cursive;
+  padding:46px;
 }
 
