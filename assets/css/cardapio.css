@@ -75,7 +75,7 @@
 }
 
 #variados {
-  display:none;
+  display:block;
 }
 
 .botaoVoltar {
@@ -92,8 +92,6 @@
 
 .cartoes-aceitos {
   background-color:#413934;
-  padding:35px;
-  padding-left:98px;
 }
 
 #subtitulo-menu {
