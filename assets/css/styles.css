@@ -1,5 +1,42 @@
-.separador {
-  height:49px;
-  background-image:url("../../assets/img/bambu.jpg");
+#carousel-1 {
+  width:auto;
+  height:auto;
+}
+
+@media (max-width: 576px) {
+  #carousel-1 {
+    width:auto;
+    height:436px;
+  }
+}
+
+.carousel-inner {
+  width:auto;
+  height:auto;
+}
+
+@media (max-width: 576px) {
+  .carousel-inner {
+    width:auto;
+    height:100%;
+  }
+}
+
+.w-100.d-block.w-100 {
+  width:auto;
+  height:436px;
+}
+
+@media (max-width: 576px) {
+  #cabecalho-cartoes {
+    text-align:center;
+  }
+}
+
+#cabecalho-cartoes {
+  font-family:'Bubblegum Sans';
+  font-size:27px;
+  color:white;
+  margin-right:11px;
 }
 

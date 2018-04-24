@@ -1,7 +1,8 @@
 .footer-dark {
   padding:50px 0;
   color:#f0f9ff;
-  background-color:#282d32;
+  background:rgb(207,10,20);
+  background:linear-gradient(0deg, rgba(207,10,20,1) 5%, rgba(228,87,46,1) 84%);
 }
 
 .footer-dark h3 {
@@ -47,7 +48,6 @@
 }
 
 .footer-dark .item.text p {
-  opacity:0.6;
   margin-bottom:0;
 }
 
@@ -83,7 +83,6 @@
 .footer-dark .copyright {
   text-align:center;
   padding-top:24px;
-  opacity:0.3;
   font-size:13px;
   margin-bottom:0;
 }

@@ -1,9 +1,14 @@
-.navbar {
+.nav-link {
+  font-size:23px;
+  font-family:'Architects Daughter', cursive;
 }
 
-.nav-link {
-  font-size:18px;
-  font-family:'Architects Daughter', cursive;
+@media (max-width: 576px) {
+  .nav-link {
+    font-size:23px;
+    font-family:'Architects Daughter', cursive;
+    text-align:center;
+  }
 }
 
 .navbar-brand {
@@ -27,13 +32,6 @@
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
   color:white;
-}
-
-nav-item > nav-link:hover {
-  color:white;
-}
-
-#img-logo {
 }
 
 .navbar.navbar-light.navbar-expand-md.background-bar {

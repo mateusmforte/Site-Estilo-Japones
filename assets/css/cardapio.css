@@ -20,12 +20,14 @@
   padding-bottom:45px;
   background-repeat:no-repeat;
   background-size:cover;
+  background-position:center;
 }
 
 .opcoes-item {
   width:186px;
   height:186px;
   margin:9px 32px;
+  border:solid 5px #FDEB1B;
 }
 
 .texto-cardapio {
@@ -99,12 +101,14 @@
 }
 
 .cartoes-aceitos {
-  background-color:#413934;
+  background-color:#845030;
   height:auto;
   padding-bottom:22px;
   padding-left:5px;
-  padding-right:auto;
   padding-top:38px;
+  border:solid 2px #1f0f0e;
+  border-left:none;
+  border-right:none;
 }
 
 #subtitulo-menu {
