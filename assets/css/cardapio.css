@@ -2,7 +2,7 @@
   color:#d7d7d7;
   padding:18px;
   font-family:'Bubblegum Sans', cursive;
-  font-size:56px;
+  font-size:63px;
 }
 
 .navbar-brand.flex-nowrap {
@@ -21,6 +21,7 @@
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .opcoes-item {
@@ -28,6 +29,7 @@
   height:186px;
   margin:9px 32px;
   border:solid 5px #FDEB1B;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .texto-cardapio {
@@ -106,9 +108,6 @@
   padding-bottom:22px;
   padding-left:5px;
   padding-top:38px;
-  border:solid 2px #1f0f0e;
-  border-left:none;
-  border-right:none;
 }
 
 #subtitulo-menu {
@@ -154,5 +153,10 @@
   color:rgb(227,228,230);
   font-family:'Bubblegum Sans', cursive;
   padding:46px;
+}
+
+#nossocardapio-cabecalho {
+  color:white;
+  text-shadow:-2px 0 #432908, 0 2px #432908, 2px 0 #432908, 0 -2px #432908;
 }
 
