@@ -5,14 +5,21 @@
   font-size:56px;
 }
 
+.navbar-brand.flex-nowrap {
+}
+
 .cardapio-body {
-  background-color:#413934;
   padding-top:43px;
   height:auto;
   max-height:100%;
   display:block;
   width:auto;
   min-height:500px;
+  background-color:#E4572E;
+  background-image:url("../../assets/img/culturejapanese.jpg");
+  padding-bottom:45px;
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
 .opcoes-item {
@@ -24,7 +31,6 @@
 .texto-cardapio {
   color:#d7d7d7;
   font-size:22px;
-  padding-left:61px;
 }
 
 #bebidas {
@@ -75,7 +81,7 @@
 }
 
 #variados {
-  display:block;
+  display:none;
 }
 
 .botaoVoltar {
@@ -88,10 +94,17 @@
   width:104px;
   height:67px;
   margin-right:19px;
+  margin-bottom:7px;
+  margin-left:5px;
 }
 
 .cartoes-aceitos {
   background-color:#413934;
+  height:auto;
+  padding-bottom:22px;
+  padding-left:5px;
+  padding-right:auto;
+  padding-top:38px;
 }
 
 #subtitulo-menu {

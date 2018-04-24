@@ -1,7 +1,4 @@
-@media (min-width: 768px) {
-  .navbar {
-    background-color:#000000;
-  }
+.navbar {
 }
 
 .nav-link {
@@ -10,10 +7,10 @@
 }
 
 .navbar-brand {
-  font-size:35px;
-  font-family:'Bubblegum Sans', cursive;
   font-weight:normal;
-  color:#d77037;
+  padding-bottom:0px;
+  width:226px;
+  height:151px;
 }
 
 .navbar-dark .navbar-brand {
@@ -34,5 +31,13 @@
 
 nav-item > nav-link:hover {
   color:white;
+}
+
+#img-logo {
+}
+
+.navbar.navbar-light.navbar-expand-md.background-bar {
+  background:rgb(207,10,20);
+  background:linear-gradient(0deg, rgba(207,10,20,1) 5%, rgba(228,87,46,1) 84%);
 }
 

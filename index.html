@@ -15,20 +15,22 @@
     <link rel="stylesheet" href="assets/css/barraNavegacao.css">
     <link rel="stylesheet" href="assets/css/cardapio.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/ondeEstamos.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md bg-dark">
-        <div class="container-fluid"><a class="navbar-brand" href="#" style="color:rgb(215,112,55);font-family:'Bubblegum Sans', cursive;">Estilo Japonês</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only" style="color:rgb(215,112,55);">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
+    <nav class="navbar navbar-light navbar-expand-md background-bar">
+        <div class="container-fluid"><a class="navbar-brand d-flex align-items-center align-content-center align-self-center flex-wrap m-auto" href="#"><img class="img-fluid align-self-center" src="assets/img/japa.png" id="img-logo"></a><button class="navbar-toggler align-self-baseline"
+                data-toggle="collapse" data-target="#navcol-1" style="margin-left:-38px;margin-right:0px;"><span class="sr-only" style="color:rgb(215,112,55);">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav align-content-center ml-auto align-items-sm-center">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Nosso Cardápio</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Onde Estamos</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     <div class="carousel slide" data-ride="carousel" id="carousel-1">
@@ -45,18 +47,18 @@
             <li data-target="#carousel-1" data-slide-to="2"></li>
             </ol>
     </div>
-    <div class="separador"></div>
     <div id="cardapio" class="cardapio-body">
         <div class="container">
             <div class="row">
                 <div class="col" id="menu">
-                    <h2 class="text-center cabecalhos">Nosso Cardápio</h2>
+                    <h2 class="text-center cabecalhos" style="color:#a0ca37;">Nosso Cardápio</h2>
                     <p class="text-center" id="subtitulo-menu">Clique para ver nossas opções</p>
                     <div>
-                        <div class="col-10 offset-1 d-flex float-none flex-row justify-content-center align-items-center align-content-center align-self-center flex-wrap m-auto"><img class="rounded-circle img-fluid opcoes-item" src="assets/img/Imagens Menu/temaki-menu.jpg" id="opcao-temaki"><img class="rounded-circle img-fluid d-inline-flex opcoes-item" src="assets/img/Imagens Menu/niguiri-menu.jpg" id="opcao-niguiri"><img class="rounded-circle img-fluid d-inline-flex opcoes-item"
-                                src="assets/img/Imagens Menu/sashimi-menu.jpg" id="opcao-sashimi"><img class="rounded-circle d-inline-flex opcoes-item" src="assets/img/Imagens Menu/combo-menu.jpg" id="opcao-combos"><img class="rounded-circle d-inline-flex opcoes-item" src="assets/img/Imagens Menu/roll-menu.jpg" id="opcao-roll">
-                            <img
-                                class="rounded-circle d-inline-flex opcoes-item" src="assets/img/Imagens Menu/yakisoba-menu.jpg" id="opcao-yakisoba"><img class="rounded-circle d-inline-flex opcoes-item" src="assets/img/Imagens Menu/variado-menu.jpg" id="opcao-variados"><img class="rounded-circle d-inline-flex opcoes-item" src="assets/img/Imagens Menu/bebidas-menu.jpg" id="opcao-bebidas"></div>
+                        <div class="col-10 offset-1 d-flex float-none flex-row justify-content-center align-items-center align-content-center align-self-center flex-wrap m-auto"><img class="rounded-circle img-fluid opcoes-item" src="assets/img/Imagens Menu/temaki-menu.jpg" data-bs-hover-animate="pulse" id="opcao-temaki"><img class="rounded-circle img-fluid d-inline-flex opcoes-item" src="assets/img/Imagens Menu/niguiri-menu.jpg" data-bs-hover-animate="pulse"
+                                id="opcao-niguiri"><img class="rounded-circle img-fluid d-inline-flex opcoes-item" src="assets/img/Imagens Menu/sashimi-menu.jpg" data-bs-hover-animate="pulse" id="opcao-sashimi"><img class="rounded-circle d-inline-flex opcoes-item" src="assets/img/Imagens Menu/combo-menu.jpg"
+                                data-bs-hover-animate="pulse" id="opcao-combos"><img class="rounded-circle d-inline-flex opcoes-item" src="assets/img/Imagens Menu/roll-menu.jpg" data-bs-hover-animate="pulse" id="opcao-roll"><img class="rounded-circle d-inline-flex opcoes-item"
+                                src="assets/img/Imagens Menu/yakisoba-menu.jpg" data-bs-hover-animate="pulse" id="opcao-yakisoba"><img class="rounded-circle d-inline-flex opcoes-item" src="assets/img/Imagens Menu/variado-menu.jpg" data-bs-hover-animate="pulse" id="opcao-variados"><img class="rounded-circle d-inline-flex opcoes-item"
+                                src="assets/img/Imagens Menu/bebidas-menu.jpg" data-bs-hover-animate="pulse" id="opcao-bebidas"></div>
                     </div>
                 </div>
             </div>
@@ -232,6 +234,12 @@
                             <div class="d-inline-block m-auto"><img class="rounded-circle img-fluid opcoes-item" src="assets/img/ceviche.png">
                                 <p class="text-center descricao-opcoes">Ceviche</p>
                             </div>
+                            <div class="d-inline-block m-auto"><img class="rounded-circle img-fluid opcoes-item" src="assets/img/CorvinaCamarao.jpg">
+                                <p class="text-center descricao-opcoes">Corvina com Camarão</p>
+                            </div>
+                            <div class="d-inline-block m-auto"><img class="rounded-circle img-fluid opcoes-item" src="assets/img/petiscos.jpg">
+                                <p class="text-center descricao-opcoes">Petiscos de&nbsp;<br>Camarão e Salmão</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,12 +264,11 @@
             <img
                 src="assets/img/Hiper.png" class="cartoes" style="height:75px;width:74px;"><img src="assets/img/americanexpress.png" class="cartoes"><img src="assets/img/dinner.png" class="cartoes"></div>
     </div>
-    <div class="separador"></div>
-    <div data-bs-parallax-bg="true" id="onde-estamos" style="background-image:url(assets/img/background2.jpg);background-position:center;background-size:cover;">
+    <div data-bs-parallax-bg="true" id="onde-estamos" style="background-image:url(&quot;assets/img/background1.jpg&quot;);background-position:center;background-size:cover;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center cabecalhos" style="color:rgb(44,12,12);">Onde Estamos</h1>
+                    <h1 class="text-center cabecalhos" style="color:#E4572E;">Onde Estamos</h1>
                     <p id="endereco-horario">Rua Ibitinga 103, esquina com a Rua Ierê..<br> Vicente De Carvalho, Rio De Janeiro<br>Horário de funcionamento: Qua-Dom 18:00 - 00:00<br></p><iframe allowfullscreen="" frameborder="0" width="100%" height="400" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCZNR2AJJi4RiOxbqPL5vuzWm4zEWnD5eE+&amp;q=Rua+Ibitinga+103&amp;zoom=19"
                         id="mapa"></iframe></div>
             </div>
