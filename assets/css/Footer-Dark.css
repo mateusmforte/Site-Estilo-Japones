@@ -1,8 +1,7 @@
 .footer-dark {
   padding:50px 0;
   color:#f0f9ff;
-  background:rgb(207,10,20);
-  background:linear-gradient(0deg, rgba(207,10,20,1) 5%, rgba(228,87,46,1) 84%);
+  background:#680612;
 }
 
 .footer-dark h3 {
