@@ -1,11 +1,7 @@
 .cabecalhos {
-  color:#d7d7d7;
   padding:18px;
   font-family:'Bubblegum Sans', cursive;
   font-size:63px;
-}
-
-.navbar-brand.flex-nowrap {
 }
 
 .cardapio-body {
@@ -65,10 +61,6 @@
 }
 
 #sashimi {
-  display:none;
-}
-
-#gunkan {
   display:none;
 }
 
@@ -145,18 +137,23 @@
 }
 
 #img-combo {
-  width:319px;
-  height:225px;
+  width:450px;
+  height:276px;
 }
 
 #opcoes-combo {
   color:rgb(227,228,230);
   font-family:'Bubblegum Sans', cursive;
   padding:46px;
+  font-size:28px;
 }
 
 #nossocardapio-cabecalho {
-  color:white;
   text-shadow:-2px 0 #432908, 0 2px #432908, 2px 0 #432908, 0 -2px #432908;
+  color:white;
+}
+
+.precos {
+  font-size:24px;
 }
 
