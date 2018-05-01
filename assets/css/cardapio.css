@@ -6,10 +6,8 @@
 
 .cardapio-body {
   padding-top:43px;
-  height:auto;
   max-height:100%;
   display:block;
-  width:auto;
   min-height:500px;
   background-color:#E4572E;
   background-image:url("../../assets/img/culturejapanese.jpg");
@@ -17,6 +15,7 @@
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
+  background-attachment:fixed;
   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -24,7 +23,7 @@
   width:186px;
   height:186px;
   margin:9px 32px;
-  border:solid 5px #FDEB1B;
+  border:solid 5px white;
   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -34,7 +33,7 @@
 }
 
 #bebidas {
-  display:none;
+  display:block;
 }
 
 #temaki {
@@ -44,6 +43,17 @@
 #opcoes-refrigerante {
   color:rgb(227,228,230);
   font-family:'Bubblegum Sans', cursive;
+  background-color:rgba(191,111,90,0.67);
+  width:363px;
+  font-size:25px;
+}
+
+@media (max-width: 576px) {
+  #opcoes-refrigerante {
+    width:auto;
+    margin-left:auto;
+    margin-right:auto;
+  }
 }
 
 #menu {
@@ -54,6 +64,7 @@
   color:rgb(245,246,247);
   font-family:'Bubblegum Sans', cursive;
   font-size:30px;
+  background-color:rgba(95,57,57,0.65);
 }
 
 #niguiri {
@@ -70,6 +81,7 @@
 
 #rollmaki {
   display:none;
+  background-size:cover;
 }
 
 #combos {
@@ -84,6 +96,11 @@
   color:white;
   font-size:23px;
   width:15px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  cursor:pointer;
 }
 
 .cartoes {
@@ -106,13 +123,15 @@
   color:rgb(241,241,242);
   font-size:31px;
   font-family:'Architects Daughter', cursive;
+  text-shadow:-2px 0 #432908, 0 2px #432908, 2px 0 #432908, 0 -2px #432908;
 }
 
 .texto-opcoes {
   color:rgb(241,241,242);
-  font-size:31px;
+  font-size:39px;
   font-family:'Architects Daughter', cursive;
   display:block;
+  text-shadow:-2px 0 #432908, 0 2px #432908, 2px 0 #432908, 0 -2px #432908;
 }
 
 .fade-out {
@@ -155,5 +174,9 @@
 
 .precos {
   font-size:24px;
+}
+
+.rounded-circle.img-fluid.opcoes-item.imagens-opcoes {
+  border-color:white;
 }
 

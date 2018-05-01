@@ -12,9 +12,9 @@
 }
 
 #pedidos {
-  background-color:#845030;
+  background-color:#3f3f38;
   border:solid 3px;
-  border-bottom:none;
+  /*border-bottom:none;*/
   border-left:none;
   border-right:none;
   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
