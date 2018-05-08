@@ -156,8 +156,8 @@
 }
 
 #img-combo {
-  width:450px;
-  height:276px;
+  width:auto;
+  height:auto;
 }
 
 #opcoes-combo {
@@ -178,5 +178,9 @@
 
 .rounded-circle.img-fluid.opcoes-item.imagens-opcoes {
   border-color:white;
+}
+
+#sobremesas {
+  display:none;
 }
 

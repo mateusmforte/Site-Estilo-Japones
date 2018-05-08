@@ -9,7 +9,7 @@ function mostraOpcoesSabor(event){
                             "opcao-roll",
                             "opcao-yakisoba",
                             "opcao-variados",
-                            "opcao-bebidas"];
+                            "opcao-bebidas","opcao-sobremesas"];
     var divsCardapio = ["#temaki",
                         "#sashimi",
                         "#niguiri",
@@ -17,6 +17,7 @@ function mostraOpcoesSabor(event){
                         "#rollmaki",
                         "#yakisoba",
                         "#variados",
+                      "#sobremesas",
                         "#bebidas"];
    for(var i = 0; i<opcoesDisponiveis.length; i++){
        if(opcaoEscolhida == opcoesDisponiveis[i]){

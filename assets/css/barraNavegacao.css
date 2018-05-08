@@ -1,6 +1,7 @@
 .nav-link {
   font-size:27px;
   font-family:'Architects Daughter', cursive;
+  margin-right:16px;
 }
 
 @media (max-width: 576px) {
@@ -32,6 +33,7 @@
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
   color:white;
+  /*text-align:center;*/
 }
 
 .navbar.navbar-light.navbar-expand-md.background-bar {
@@ -53,12 +55,14 @@
   #img-logo {
     margin-bottom:auto;
     margin-top:-7px;
+    margin-left:19px;
+    margin-right:auto;
   }
 }
 
 .nav.navbar-nav.align-content-center.ml-auto.align-items-sm-center {
   margin-top:5px;
-  margin-right:20px;
+  margin-right:-22px;
 }
 
 @media (max-width: 761px) {

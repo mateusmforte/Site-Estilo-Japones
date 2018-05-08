@@ -40,3 +40,7 @@
   margin-right:11px;
 }
 
+body {
+  overflow-x:hidden;
+}
+
