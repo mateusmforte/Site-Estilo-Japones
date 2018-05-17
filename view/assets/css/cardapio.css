@@ -1,0 +1,181 @@
+.cabecalhos {
+  padding:18px;
+  font-family:'Bubblegum Sans', cursive;
+  font-size:63px;
+}
+
+.cardapio-body {
+  padding-top:43px;
+  max-height:100%;
+  display:block;
+  min-height:500px;
+  background-color:#E4572E;
+  padding-bottom:45px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.opcoes-item {
+  width:186px;
+  height:186px;
+  margin:9px 32px;
+  border:solid 5px white;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.texto-cardapio {
+  color:#d7d7d7;
+  font-size:22px;
+}
+
+#bebidas {
+  display:none;
+}
+
+#temaki {
+  display:none;
+}
+
+#opcoes-refrigerante {
+  color:rgb(227,228,230);
+  font-family:'Bubblegum Sans', cursive;
+  background-color:rgba(191,111,90,0.67);
+  width:363px;
+  font-size:25px;
+}
+
+@media (max-width: 576px) {
+  #opcoes-refrigerante {
+    width:auto;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+#menu {
+  display:block;
+}
+
+.descricao-opcoes {
+  color:rgb(245,246,247);
+  font-family:'Bubblegum Sans', cursive;
+  font-size:30px;
+  background-color:rgba(95,57,57,0.65);
+}
+
+#niguiri {
+  display:none;
+}
+
+#sashimi {
+  display:none;
+}
+
+#yakisoba {
+  display:none;
+}
+
+#rollmaki {
+  display:none;
+  background-size:cover;
+}
+
+#combos {
+  display:none;
+}
+
+#variados {
+  display:none;
+}
+
+.botaoVoltar {
+  color:white;
+  font-size:23px;
+  width:15px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  cursor:pointer;
+}
+
+.cartoes {
+  width:104px;
+  height:67px;
+  margin-right:19px;
+  margin-bottom:7px;
+  margin-left:5px;
+}
+
+.cartoes-aceitos {
+  background-color:#845030;
+  height:auto;
+  padding-bottom:22px;
+  padding-left:5px;
+  padding-top:38px;
+}
+
+#subtitulo-menu {
+  color:rgb(241,241,242);
+  font-size:31px;
+  font-family:'Architects Daughter', cursive;
+  text-shadow:-2px 0 #432908, 0 2px #432908, 2px 0 #432908, 0 -2px #432908;
+}
+
+.texto-opcoes {
+  color:rgb(241,241,242);
+  font-size:39px;
+  font-family:'Architects Daughter', cursive;
+  display:block;
+  text-shadow:-2px 0 #432908, 0 2px #432908, 2px 0 #432908, 0 -2px #432908;
+}
+
+.fade-out {
+  opacity:0;
+  transition:0.3s;
+}
+
+.fade-in {
+  opacity:2;
+  transition:0.3s;
+}
+
+#img-bebidas {
+  width:287px;
+  height:287px;
+}
+
+@media (max-width: 425px) {
+  #img-bebidas {
+    display:none;
+  }
+}
+
+#img-combo {
+  width:450px;
+  height:276px;
+}
+
+#opcoes-combo {
+  color:rgb(227,228,230);
+  font-family:'Bubblegum Sans', cursive;
+  padding:46px;
+  font-size:28px;
+}
+
+#nossocardapio-cabecalho {
+  text-shadow:-2px 0 #432908, 0 2px #432908, 2px 0 #432908, 0 -2px #432908;
+  color:white;
+}
+
+.precos {
+  font-size:24px;
+}
+
+.rounded-circle.img-fluid.opcoes-item.imagens-opcoes {
+  border-color:white;
+}
+

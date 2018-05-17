@@ -1,0 +1,25 @@
+#cabecalho-pedido {
+  font-family:'Bubblegum Sans', cursive;
+  font-size:58px;
+  color:rgb(249,252,255);
+  text-shadow:-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+#texto-pedido {
+  font-size:26px;
+  color:rgb(255,255,255);
+  font-family:'Averia Sans Libre', cursive;
+}
+
+#pedidos {
+  background-color:#3f3f38;
+  border:solid 3px;
+  /*border-bottom:none;*/
+  border-left:none;
+  border-right:none;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#observacao-pedido {
+}
+
