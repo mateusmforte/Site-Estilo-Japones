@@ -1,6 +1,8 @@
-var janelaLogin = $("#login");
-var loginLink = $("#loginLink");
-loginLino.onClick(function(){
-   loginLink.preventDefault();
-   janelaLogin.addClass("show");
+var modalLogin = $("#login-modal");
+$("#btn-login").click(function(){
+    modalLogin.modal();
+});
+$(".btn-close").click(function(){
+    $(this).preventDefault;
+    modalLogin.modal("toggle"); 
 });
