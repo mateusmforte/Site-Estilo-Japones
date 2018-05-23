@@ -8,17 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="assets/css/barraNavegacao.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-md bg-warning">
-        <div class="container-fluid"><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <div class="d-flex justify-content-center align-items-center align-content-center" id="banner"><img class="img-fluid d-flex align-items-center align-content-center align-self-center m-auto" src="assets/img/japa.png"></div>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container"><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link text-muted" href="#login-modal" id="btn-login" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="#">
+                            <div class="input-group">
+                                <div class="input-group-prepend"></div><input class="form-control" type="text" placeholder="Pesquisar...">
+                                <div class="input-group-append"><button class="btn btn-outline-light" type="button"><i class="icon ion-search" data-bs-hover-animate="pulse" style="font-size:18px;"></i></button></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto" id="nav-userOn">
+                    <li class="dropdown"><a class="dropdown-toggle nav-link text-monospace dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" id="minha-conta"><i class="fa fa-user-circle-o" id="icone-usuario"></i>&nbsp;</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Meus Pedidos</a><a class="dropdown-item" role="presentation" href="#">Alterar Dados</a><a class="dropdown-item" role="presentation" href="#">Sair</a></div>
+                    </li>
+                    <li class="nav-item" role="presentation"><a class="nav-link text-monospace" href="#"><i class="material-icons" id="carrinho">shopping_cart</i></a></li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto" id="nav-noUserOn">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#login-modal" id="btn-login" data-toggle="modal" data-target="#login-modal">Login</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link text-white" href="#" id="btn-cadastro" data-toggle="modal" data-target="#cadastro-modal">Cadastre-se</a></li>
                 </ul>
             </div>
@@ -58,6 +78,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
     <script src="assets/js/cadastro.js"></script>
     <script src="assets/js/login.js"></script>
 </body>
