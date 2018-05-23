@@ -4,5 +4,5 @@ $("#btn-login").click(function(){
 });
 $(".btn-close").click(function(){
     $(this).preventDefault;
-    modalLogin.modal("toggle"); 
+    modalLogin.modal("hide");
 });

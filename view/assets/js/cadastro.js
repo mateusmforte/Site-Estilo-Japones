@@ -5,5 +5,5 @@ $("#btn-cadastro").click(function(){
 });
 $(".btn-close").click(function(){
     $(this).preventDefault;
-    modalCadastro.modal(); 
+    modalCadastro.modal("hide"); 
 });

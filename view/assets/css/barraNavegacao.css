@@ -7,12 +7,13 @@
 }
 
 #nav-noUserOn {
-  display:none;
+  display:block;
 }
 
 #nav-userOn {
   /*font-size:38px;*/
   /*color:white;*/
+  display:none;
 }
 
 #carrinho {
