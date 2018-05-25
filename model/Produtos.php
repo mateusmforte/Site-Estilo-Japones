@@ -2,10 +2,10 @@
 
 Class Produtos{
 
-    private id;
-    private nome;
-    private descricao;
-    private preco;
+    private $id;
+    private $nome;
+    private $descricao;
+    private $preco;
 
     function __construct($id,$nome,$descricao,$preco){
 

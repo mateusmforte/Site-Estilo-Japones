@@ -2,8 +2,8 @@
 
 Class AvalicaoProduto{
 
-    private notaProduto;
-    private txtAvalicao;
+    private $notaProduto;
+    private $txtAvalicao;
 
 }
 
