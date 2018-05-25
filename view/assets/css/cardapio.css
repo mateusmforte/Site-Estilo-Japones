@@ -1,0 +1,44 @@
+#pesquisa-produto {
+}
+
+#btn-pesquisa {
+  color:rgb(104,6,18);
+  border-color:black;
+  border-radius:26px;
+}
+
+#campo-pesquisa {
+  border:none;
+  border-bottom:1px solid;
+  border-radius:6px;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance:inner-spin-button;
+  display:inline-block;
+  cursor:default;
+  flex:0 0 auto;
+  align-self:stretch;
+  -webkit-user-select:none;
+  opacity:0;
+  pointer-events:none;
+  -webkit-user-modify:read-only;
+}
+
+.qtd-produto {
+  width:61px;
+  text-align:center;
+  padding-left:12px;
+}
+
+.qtd-botoes {
+  color:red;
+  font-size:31px;
+  margin:10px;
+  background-color:green;
+  width:36px;
+  height:35px;
+  border-radius:82px;
+  padding-left:3px;
+}
+
