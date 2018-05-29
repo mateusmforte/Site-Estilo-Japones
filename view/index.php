@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+require_once("logica-usuario.php");
+?>
 <html>
 
 <head>
@@ -48,7 +51,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body login-clean"><a class="float-right btn-close" href="#"><i class="fa fa-close float-right"></i></a>
-                    <form method="post" id="login-cliente">
+                    <form action = "login.php" method="post" id="login-cliente">
                         <h2 class="sr-only">Login Form</h2>
                         <div class="illustration"><i class="icon ion-ios-navigate" style="color:rgb(157,0,33);"></i></div>
                         <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email"></div>
@@ -62,7 +65,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body" style="padding:0px;"><a class="float-right btn-close" href="#"><i class="fa fa-close float-right"></i></a>
-                    <form action = "login.php" method="post" id="cadastro-cliente">
+                    <form method="post" id="cadastro-cliente">
                         <h2 class="text-center"><strong>Cadastre-se</strong></h2>
                         <div class="form-group"><input class="form-control" type="text" name="nome" placeholder="Nome Completo" id="nome"></div>
                         <div class="form-group"><input class="form-control" type="text" name="cpf" placeholder="CPF" id="cpf"></div>
