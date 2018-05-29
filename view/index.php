@@ -35,6 +35,7 @@ require_once("logica-usuario.php");
                     </li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto" id="nav-userOn">
+                    <span id="nome-usuario">Nome Usuário</span>
                     <li class="dropdown"><a class="dropdown-toggle nav-link text-monospace dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" id="minha-conta"><i class="fa fa-user-circle-o" id="icone-usuario"></i>&nbsp;</a>
                         <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Meus Pedidos</a><a class="dropdown-item" role="presentation" href="#">Alterar Dados</a><a class="dropdown-item" role="presentation" href="#">Sair</a></div>
                     </li>
