@@ -6,17 +6,13 @@
   color:white;
 }
 
-#nav-noUserOn {
+#nav-userOn {
+  font-size:38px;
+  color:white;
   display:block;
 }
 
-#nav-userOn {
-  /*font-size:38px;*/
-  /*color:white;*/
-  display:none;
-}
-
-#carrinho {
+#btn-carrinho {
   font-size:44px;
   color:white;
 }
@@ -27,5 +23,14 @@
 
 #minha-conta {
   color:white;
+}
+
+#nav-noUserOn {
+  display:block;
+}
+
+#nome-usuarioLogado {
+  font-size:15px;
+  color:#ffffff;
 }
 

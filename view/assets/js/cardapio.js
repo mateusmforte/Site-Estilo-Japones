@@ -4,12 +4,16 @@ var qtdRemove = $(".qtd-remove");
 qtdAdd.click(adicionaQtd);
 qtdRemove.click(removeQtd);
 function adicionaQtd(){
-    /*Retornar aqui caso n funcione em outros navegadores*/
-    var qtd = document.querySelector(".qtd-produto");
-    qtd.stepUp(1);
+    var qtd = parseInt($(".qtd-produto").val());
+    qtdAdiciona = qtd + 1;
+    $(".qtd-produto").val(qtdAdiciona);
 }
 function removeQtd(){
-   var qtd = document.querySelector(".qtd-produto");
-   qtd.stepDown(1);
+    var qtd = parseInt($(".qtd-produto").val());
+    if(qtd == 0){
+        return false;
+    }else{
+         qtdRemove = qtd - 1;
+         $(".qtd-produto").val(qtdRemove);
+    }   
 }
-

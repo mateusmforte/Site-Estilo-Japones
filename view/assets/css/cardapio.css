@@ -1,10 +1,12 @@
 #pesquisa-produto {
+  margin-bottom:19px;
 }
 
 #btn-pesquisa {
   color:rgb(104,6,18);
   border-color:black;
   border-radius:26px;
+  margin-left:12px;
 }
 
 #campo-pesquisa {
@@ -26,19 +28,87 @@ input::-webkit-inner-spin-button {
 }
 
 .qtd-produto {
-  width:61px;
+  width:65px;
   text-align:center;
   padding-left:12px;
+  height:28px;
 }
 
 .qtd-botoes {
-  color:red;
-  font-size:31px;
+  width:30px;
+  height:30px;
+  text-align:center;
+  padding:6px 0;
+  font-size:12px;
+  line-height:0.4;
+  border-radius:15px;
+  color:rgb(255,0,0);
+  font-size:26px;
+  margin:-2px 7px;
+  background-color:transparent;
+  border:#eee solid 1px;
+}
+
+.qtd-botoes:hover {
+  background-color:red;
+  color:white;
+}
+
+.cardapio {
+  background:transparent;
+  background-color:rgba(129,81,25,0.5);
+}
+
+.btn-adicionar-carrinho {
+  margin-top:17px;
+  border:solid 2px red;
+  font-family:'Architects Daughter', cursive;
+}
+
+.btn-adicionar-carrinho:hover {
+  border:solid 2px rgb(255,224,116);
+  background-color:rgb(224,197,103);
+}
+
+
+.item-cardapio {
+  /*border:red solid 1px;*/
   margin:10px;
-  background-color:green;
-  width:36px;
-  height:35px;
-  border-radius:82px;
-  padding-left:3px;
+  background-color:rgba(169,157,156,0.04);
+  -webkit-box-shadow:5px 0px 9px 0px rgba(50, 50, 50, 0.56);
+  -moz-box-shadow:5px 0px 9px 0px rgba(50, 50, 50, 0.56);
+  box-shadow:5px 0px 9px 0px rgba(50, 50, 50, 0.56);
+}
+
+.imagens-cardapio {
+  width:282px;
+  height:161px;
+  background-size:cover;
+}
+
+.btn-categoria {
+  border:solid 1px red;
+  margin-right:14px;
+  color:red;
+  margin-bottom:13px;
+}
+
+#cardapio {
+  margin-bottom:33px;
+}
+
+#opcoes-cardapio {
+  padding-left:46px;
+  padding-right:auto;
+}
+
+.nav-pills .nav-link {
+  color:black;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color:#dc3545;
+  color:white;
+  border-radius:0%;
 }
 
