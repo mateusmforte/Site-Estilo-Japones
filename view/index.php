@@ -1,5 +1,5 @@
 <?php
-    require_once("/controller/alerta.php");
+    require_once("../controller/alerta.php");
 ?>
 
 <!DOCTYPE html>
@@ -634,6 +634,7 @@
                         <h2 class="sr-only">Login Form</h2>
                         <?php 
                             mostraAlerta("danger");
+                            mostraAlerta("success");
                         ?>
                         <div class="illustration"><i class="icon ion-ios-navigate" style="color:rgb(157,0,33);"></i></div>
                         <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email"></div>

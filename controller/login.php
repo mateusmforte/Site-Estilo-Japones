@@ -8,7 +8,7 @@ if($usuario == null) {
     $_SESSION['danger'] = "Usuário ou senha inválida";
     header("Location: ../view/index.php");
 }   else{
-    $_SESSION["success"] = "Usuário logado com sucesso.";
+    $_SESSION['success'] = "Usuário logado com sucesso.";
     logaUsuario($usuario["email"]);
     header("Location: ../view/index.php");
 }
