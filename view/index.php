@@ -649,7 +649,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body" style="padding:0px;"><a class="float-right btn-close" href="#"><i class="fa fa-close float-right"></i></a>
-                    <form method="post" id="cadastro-cliente"><!--Form de Cadastro-->
+                    <form action="..\controller\cadastroUsuario.php" method="post" id="cadastro-cliente"><!--Form de Cadastro-->
                         <h2 class="text-center"><strong>Cadastre-se</strong></h2>
                         <div class="form-group"><input class="form-control" type="text" name="nome" placeholder="Nome Completo" id="nome"></div>
                         <div class="form-group"><input class="form-control" type="text" name="cpf" placeholder="CPF" id="cpf"></div>
