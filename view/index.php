@@ -1,3 +1,7 @@
+<?php
+    require_once("/controller/alerta.php");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -626,8 +630,11 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body login-clean"><a class="float-right btn-close" href="#"><i class="fa fa-close float-right"></i></a>
-                    <form method="post" action="login.php"id="login-cliente"><!--Form de login-->
+                    <form method="post" action="../controller/login.php"id="login-cliente"><!--Form de login-->
                         <h2 class="sr-only">Login Form</h2>
+                        <?php 
+                            mostraAlerta("danger");
+                        ?>
                         <div class="illustration"><i class="icon ion-ios-navigate" style="color:rgb(157,0,33);"></i></div>
                         <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email"></div>
                         <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senha"></div>
