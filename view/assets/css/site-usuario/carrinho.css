@@ -1,0 +1,32 @@
+#carrinho {
+}
+
+#cabecalho-carrinho {
+  background-color:#680612;
+  color:white;
+  font-family:'Architects Daughter', cursive;
+}
+
+#btn-finalizarPedido {
+  background-color:transparent;
+  color:#680612;
+  border-radius:0%;
+  border:solid 2px #680612;
+}
+
+#btn-finalizarPedido:hover {
+  background-color:#680612;
+  color:white;
+}
+
+.close {
+  color:white;
+}
+
+#texto-total {
+  margin-right:162px;
+}
+
+.btn-remover-item {
+}
+

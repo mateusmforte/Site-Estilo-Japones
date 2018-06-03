@@ -1,0 +1,41 @@
+.navbar.navbar-light.navbar-expand-md {
+  background-color:#680612;
+}
+
+#btn-login {
+  color:white;
+}
+
+#nav-userOn {
+  color:white;
+  display:block;
+}
+
+#btn-carrinho {
+  font-size:36px;
+  color:white;
+}
+
+#icone-usuario {
+  font-size:41px;
+}
+
+#minha-conta {
+  color:white;
+}
+
+#nav-noUserOn {
+  display:none;
+}
+
+#nome-usuarioLogado {
+  font-size:18px;
+  color:#ffffff;
+}
+
+#qntd-carrinho {
+  color:black;
+  background:white;
+  border-radius:100%;
+}
+
