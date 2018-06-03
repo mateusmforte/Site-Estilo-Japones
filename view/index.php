@@ -654,8 +654,8 @@
                         <div class="form-group"><input class="form-control" type="text" name="cpf" placeholder="CPF" id="cpf"></div>
                         <div class="form-group"><input class="form-control" type="text" name="endereco" placeholder="Endereço" id="endereco"></div>
                         <div class="form-group"><input class="form-control" type="text" name="telefone" placeholder="Telefone" id="telefone"></div>
-                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senha"></div>
+                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="emailCadastro"></div>
+                        <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senhaCadastro"></div>
                         <div class="form-group"><input class="form-control" type="password" name="senha-repetir" placeholder="Repita a Senha" id="repetirSenha"></div>
                         <div class="form-group"><button class="btn btn-primary btn-block" type="submit" id="btn-criarconta">Criar Conta</button></div><a href="#" class="already">Ja Possui uma conta? Login</a>
                     </form>
