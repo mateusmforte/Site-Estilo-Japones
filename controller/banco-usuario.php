@@ -10,6 +10,6 @@ function buscaUsuario($conexao, $email, $senha){
     return $usuario;
 }
 
-function insereUsuario($conexao, $email, $senha){
+function insereUsuario($conexao, $email, $senha, ){
 
 }
