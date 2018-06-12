@@ -1,5 +1,4 @@
 <?php
-require_once("conecta.php");
 
 function buscaUsuario($conexao, $email, $senha){
     $senhaMd5 = md5($senha);
@@ -11,8 +10,10 @@ function buscaUsuario($conexao, $email, $senha){
 };
 
 function insereUsuario($conexao, $nome, $cpf, $endereco, $telefone, $email, $senha){
-    $query = "insert into usuarios (usuario, senha) values('{$email}','{$senha}')
-                insert into cadastro (nome, cpf, endereco, telefone) 
-                    values('{$nome}','{$cpf}','{$endereco}','{$telefone}'";
+	$senhaMd5 = md5($senha);
+    $query = "insert into usuarios(usuario, senha) values('{$email}','{$senhaMd5}');
+				insert into cadastro(nome, cpf, endereco, telefone) 
+                    values('{$nome}', {$cpf}, '{$endereco}', {$telefone})";
+                
     return mysqli_query($conexao, $query);
 }
