@@ -8,8 +8,11 @@ function buscaUsuario($conexao, $email, $senha){
     $resultado = mysqli_query($conexao, $query);
     $usuario = mysqli_fetch_assoc($resultado);
     return $usuario;
-}
+};
 
-function insereUsuario($conexao, $email, $senha, ){
-
+function insereUsuario($conexao, $nome, $cpf, $endereco, $telefone, $email, $senha){
+    $query = "insert into usuarios (usuario, senha) values('{$email}','{$senha}')
+                insert into cadastro (nome, cpf, endereco, telefone) 
+                    values('{$nome}','{$cpf}','{$endereco}','{$telefone}'";
+    return mysqli_query($conexao, $query);
 }
