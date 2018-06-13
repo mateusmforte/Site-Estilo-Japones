@@ -639,7 +639,7 @@
                         <div class="illustration"><i class="icon ion-ios-navigate" style="color:rgb(157,0,33);"></i></div>
                         <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email"></div>
                         <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senha"></div>
-                        <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(98,36,49);">Log In</button></div><a href="#" class="forgot" style="color:rgb(255,68,147);">Esqueceu sua Senha?</a>
+                        <div class="form-group"><button class="btn btn-primary btn-block"  id="btn-login" type="submit" style="background-color:rgb(98,36,49);">Log In</button></div><a href="#" class="forgot" style="color:rgb(255,68,147);">Esqueceu sua Senha?</a>
                     </form>
                 </div>
             </div>
@@ -670,6 +670,16 @@
     <script src="assets/js/cadastro.js"></script>
     <script src="assets/js/cardapio.js"></script>
     <script src="assets/js/login.js"></script>
+    <script type="text/javascript">
+        var email = $("#email").val();
+        var senha = $("#senha").val();
+        var btnLogin = $("#btn-login");
+        btnLogin.click(function(){
+            if(email == ""){
+              email.css("color","red");
+            }
+        });
+    </script>
 </body>
 
 </html>
