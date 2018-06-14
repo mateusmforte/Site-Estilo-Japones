@@ -3,6 +3,6 @@ $("#btn-login").click(function(){
     modalLogin.modal();
 });
 $(".btn-close").click(function(){
-    $(this).preventDefault();
+    $(this).preventDefault;
     modalLogin.modal("hide");
 });

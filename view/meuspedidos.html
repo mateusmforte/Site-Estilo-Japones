@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo Japonês Sistema Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/site-adm/barraNavegacaoSistema.css">
+    <link rel="stylesheet" href="assets/css/site-usuario/barraNavegacao.css">
+    <link rel="stylesheet" href="assets/css/site-usuario/cadastro.css">
+    <link rel="stylesheet" href="assets/css/site-usuario/cardapio.css">
+    <link rel="stylesheet" href="assets/css/site-usuario/carrinho.css">
+    <link rel="stylesheet" href="assets/css/site-usuario/login.css">
+    <link rel="stylesheet" href="assets/css/site-usuario/rodape.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="d-flex justify-content-center align-items-center align-content-center" id="banner"><img class="img-fluid d-flex align-items-center align-content-center align-self-center m-auto" src="assets/img/japa.png"></div>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top">
+        <div class="container-fluid"><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav d-flex align-items-center ml-auto" id="nav-userOn">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="nome-usuarioLogado">Nome Usuário</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" id="minha-conta"><i class="fa fa-user-circle-o" id="icone-usuario"></i>&nbsp;</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Meus Pedidos</a><a class="dropdown-item" role="presentation" href="#">Alterar Dados</a><a class="dropdown-item" role="presentation" href="#">Sair</a></div>
+                    </li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#carrinho" data-toggle="modal" data-target="#carrinho"><i class="material-icons" id="btn-carrinho">shopping_cart</i><span class="badge badge-primary" id="qntd-carrinho">0</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav" id="nav-noUserOn">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#login-modal" id="btn-login" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link text-white" href="#" id="btn-cadastro" data-toggle="modal" data-target="#cadastro-modal">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <h1>Meus Pedidos</h1>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Número Pedido</th>
+                        <th>Data</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1300</td>
+                        <td>13/06/2018</td>
+                        <td>R$ 180,00</td>
+                        <td>Entregue</td>
+                        <td><a href="#">Visualizar</a></td>
+                    </tr>
+                    <tr>
+                        <td>1340</td>
+                        <td>10/06/2018</td>
+                        <td>R$ 245,50</td>
+                        <td>Entregue</td>
+                        <td><a href="#">Visualizar</a></td>
+                    </tr>
+                    <tr>
+                        <td>2354</td>
+                        <td>05/04/2018</td>
+                        <td>R$ 160,00</td>
+                        <td>Entregue</td>
+                        <td><a href="#">Visualizar</a></td>
+                    </tr>
+                    <tr>
+                        <td>2311</td>
+                        <td>12/12/2017</td>
+                        <td>R$ 60,00</td>
+                        <td>Entregue</td>
+                        <td><a href="#">Visualizar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <h1>Pedido #Numero</h1>
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Número do Pedido:</td>
+                        <td>#2333</td>
+                    </tr>
+                    <tr>
+                        <td>Data:</td>
+                        <td>13/06/2018</td>
+                    </tr>
+                    <tr>
+                        <td>Total:</td>
+                        <td>R$ 180,00</td>
+                    </tr>
+                    <tr>
+                        <td>Método de Pagamento:</td>
+                        <td>PagSeguro</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>Entregue</td>
+                    </tr>
+                    <tr>
+                        <td>Itens:</td>
+                        <td>1 Sushi Salmão&nbsp;<br>3 Temaki Camarão&nbsp;<br>1 Coca-cola<br></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="assets/js/cadastro.js"></script>
+    <script src="assets/js/cardapio.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>
