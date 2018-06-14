@@ -1,9 +1,11 @@
-var btnCarrinho = $(".btn-adicionar-carrinho");
-var countCarrinho = $("#qntd-carrinho");
-var carrinho = $("#btn-carrinho");
+$(document).ready(function(){
+    var btnCarrinho = $(".btn-adicionar-carrinho");
+    var countCarrinho = $("#qntd-carrinho");
+    var carrinho = $("#btn-carrinho");
 
-btnCarrinho.on("click",function(){
-    adicionaProduto($(this));
+    btnCarrinho.on("click",function(){
+        adicionaProduto($(this));
+    });
 });
 
 function adicionaProduto(el){
