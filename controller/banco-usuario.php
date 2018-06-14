@@ -15,5 +15,5 @@ function insereUsuario($conexao, $nome, $cpf, $endereco, $telefone, $email, $sen
 				insert into cadastro(nome, cpf, endereco, telefone) 
                     values('{$nome}', {$cpf}, '{$endereco}', {$telefone})";
                 
-    return mysqli_query($conexao, $query);
+    return mysqli_multi_query($conexao, $query);
 }
