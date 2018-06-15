@@ -1,0 +1,31 @@
+#tabela-pedidos {
+  background-color:rgba(221,255,12,0.18);
+}
+
+.historico-pedidos {
+  background-color:#eee;
+  height:65px;
+}
+
+.itens-pedido {
+  margin-bottom:0px;
+}
+
+.label-info-pedido {
+  font-size:20px;
+}
+
+.btn-avaliar {
+  margin:24px;
+  width:237px;
+  border:1px solid red;
+  background-color:white;
+  font-family:'Architects Daughter';
+  color:black;
+  font-size:20px;
+}
+
+#meus-pedidos {
+  margin:36px;
+}
+
