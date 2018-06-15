@@ -1,5 +1,5 @@
 <?php
-
+#Busca no banco de dados o login e senha do usuário para poder acessar.
 function buscaUsuario($conexao, $email, $senha){
     $senhaMd5 = md5($senha);
     $email = mysqli_real_escape_string($conexao, $email);
@@ -9,6 +9,7 @@ function buscaUsuario($conexao, $email, $senha){
     return $usuario;
 };
 
+#Função criada para adicionar novos clientes.
 function insereUsuario($conexao, $nome, $cpf, $endereco, $telefone, $email, $senha){
 	$senhaMd5 = md5($senha);
     $query = "insert into usuarios(usuario, senha) values('{$email}','{$senhaMd5}');

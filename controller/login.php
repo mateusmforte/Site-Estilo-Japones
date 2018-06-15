@@ -2,8 +2,10 @@
     require_once("banco-usuario.php");
     require_once("logica-usuario.php");
 
+#chamando a função para logar.
 $usuario = buscaUsuario($conexao, $_POST['email'], $_POST['senha']);
 
+#verificando se houve conseguiu acessar ou não
 if($usuario == null) {
     $_SESSION['danger'] = "Usuário ou senha inválida";
     header("Location: ../view/index.php");
