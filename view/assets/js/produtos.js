@@ -1,6 +1,8 @@
+$(document).ready(function(){
+    var produtos = $(".produtos").find(".card-group");
+    produtos.prepend(criarProduto());
+});
 
-var produtos = $(".produtos").find(".card-group");
-produtos.prepend(criarProduto(null,"Camarão","R$35,90","Temaki Camarão"));
 
 function criarProduto(){
     var cardProduto = $("<div></div>").addClass("card flex-wrap item-cardapio produto"); //Cria o card 
@@ -14,28 +16,35 @@ function criarProduto(){
     cardProdutoBody.append(insereBtnAdicionarCarrinho());
 
     cardProduto.append(cardProdutoBody);
-
+    console.log(cardProduto);
+    console.log(cardProdutoBody);
+    console.log(insereImagemProduto());
+    console.log(insereTituloProduto());
+    console.log(inserePrecoProduto());
+    console.log(insereDescricaoProduto());
+    console.log(insereQuantidadeProduto());
+    console.log(insereBtnAdicionarCarrinho());
     return cardProduto;
    
 }
-function insereImagemProduto(img){
+function insereImagemProduto(){
     var img = $("<img>").addClass("img-fluid imagem-produto");//Tag img
     img.attr("src","assets/img/aea6de9cbaee9d2704dcf81f4a194991-754x394.jpg"); //!!! Fazer com que a imagem se altere através do banco!!!
     return img;
 }
-function insereTituloProduto(titulo){
+function insereTituloProduto(){
     var tituloProduto = $("<h4>").addClass("card-title titulo-produto center");
-    tituloProduto.text(titulo);
+    tituloProduto.text("Titulo");
     return  tituloProduto;
 }
-function inserePrecoProduto(preco){
+function inserePrecoProduto(){
     var precoProduto = $("<h5>").addClass("preco-produto center");
-    precoProduto.text(preco);
+    precoProduto.text("R$0,00");
     return precoProduto;
 }
-function insereDescricaoProduto(descricao){
+function insereDescricaoProduto(){
     var descricaoProduto = $("<p>").addClass("card-text descricao-produto");
-    descricaoProduto.text(descricao);
+    descricaoProduto.text("Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.");
     return descricaoProduto;
 }
 function insereQuantidadeProduto(){
