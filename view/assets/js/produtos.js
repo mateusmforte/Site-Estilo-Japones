@@ -1,8 +1,6 @@
-$(document).ready(function(){
-    var produtos = $(".produtos").find(".card-group");
-    produtos.prepend(criarProduto());
-});
 
+var produtos = $(".produtos").find(".card-group");
+produtos.prepend(criarProduto(null,"Camarão","R$35,90","Temaki Camarão"));
 
 function criarProduto(){
     var cardProduto = $("<div></div>").addClass("card flex-wrap item-cardapio produto"); //Cria o card 
@@ -16,35 +14,28 @@ function criarProduto(){
     cardProdutoBody.append(insereBtnAdicionarCarrinho());
 
     cardProduto.append(cardProdutoBody);
-    console.log(cardProduto);
-    console.log(cardProdutoBody);
-    console.log(insereImagemProduto());
-    console.log(insereTituloProduto());
-    console.log(inserePrecoProduto());
-    console.log(insereDescricaoProduto());
-    console.log(insereQuantidadeProduto());
-    console.log(insereBtnAdicionarCarrinho());
+
     return cardProduto;
    
 }
-function insereImagemProduto(){
+function insereImagemProduto(img){
     var img = $("<img>").addClass("img-fluid imagem-produto");//Tag img
     img.attr("src","assets/img/aea6de9cbaee9d2704dcf81f4a194991-754x394.jpg"); //!!! Fazer com que a imagem se altere através do banco!!!
     return img;
 }
-function insereTituloProduto(){
+function insereTituloProduto(titulo){
     var tituloProduto = $("<h4>").addClass("card-title titulo-produto center");
-    tituloProduto.text("Titulo");
+    tituloProduto.text(titulo);
     return  tituloProduto;
 }
-function inserePrecoProduto(){
+function inserePrecoProduto(preco){
     var precoProduto = $("<h5>").addClass("preco-produto center");
-    precoProduto.text("R$0,00");
+    precoProduto.text(preco);
     return precoProduto;
 }
-function insereDescricaoProduto(){
+function insereDescricaoProduto(descricao){
     var descricaoProduto = $("<p>").addClass("card-text descricao-produto");
-    descricaoProduto.text("Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.");
+    descricaoProduto.text(descricao);
     return descricaoProduto;
 }
 function insereQuantidadeProduto(){
