@@ -12,7 +12,7 @@ function buscaUsuario($conexao, $email, $senha){
 function insereUsuario($conexao, $nome, $cpf, $endereco, $telefone, $email, $senha){
 	$senhaMd5 = md5($senha);
     $query = "insert into usuarios(usuario, senha) values('{$email}','{$senhaMd5}');
-				insert into cadastro(nome, cpf, endereco, telefone) 
+				insert into clientes(nome, cpf, endereco, telefone) 
                     values('{$nome}', {$cpf}, '{$endereco}', {$telefone})";
                 
     return mysqli_multi_query($conexao, $query);
