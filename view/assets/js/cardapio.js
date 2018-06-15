@@ -1,14 +1,15 @@
-var qtdAdd = $(".qtd-add");
-var qtdRemove = $(".qtd-remove");
-
-
-$(qtdAdd).on('click', function(){
-  adicionaQtd( $(this) );
+$(document).ready(function(){
+  var qtdAdd = $(".qtd-add");
+  var qtdRemove = $(".qtd-remove");
+  
+  
+  $(qtdAdd).on('click', function(){
+    adicionaQtd( $(this) );
+  });
+  $(qtdRemove).on('click', function(){
+    removeQtd( $(this) );
+  });
 });
-$(qtdRemove).on('click', function(){
-  removeQtd( $(this) );
-});
-
 
 function adicionaQtd(el){
 	var produto = el.closest(".quantidade").find(".qtd-produto");
