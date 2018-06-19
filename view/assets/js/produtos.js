@@ -1,5 +1,7 @@
 var produtos = $(".produtos").find(".card-group");
 produtos.prepend(criarProduto(null,"Camarão","R$35,90","Camarão Temaki"));
+produtos.prepend(criarProduto(null,"Camarão","R$35,90","Camarão Temaki"));
+
 
 function criarProduto(img,titulo,preco,descricao){
     var cardProduto = $("<div></div>").addClass("card flex-wrap item-cardapio produto"); //Cria o card 
