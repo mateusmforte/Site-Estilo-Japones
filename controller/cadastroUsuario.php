@@ -1,10 +1,10 @@
 <?php
 require_once("banco-usuario.php");
 require_once("conecta.php");
+require_once("../model/Clientes.php")
 
 #Chamando a função de inserir novo cadastro. Checando se houve sucesso ou não.
-if(insereUsuario($conexao, $_POST['nome'], $_POST['cpf'], $_POST['endereco'],
-	$_POST['telefone'], $_POST['email'], $_POST['senha'])){?>
+if(insereUsuario($conexao, $clientes){?>
 	<p class="text-success">Usuário Cadastrado</p>
 <?php 
 } else {
