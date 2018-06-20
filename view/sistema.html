@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilo Japonês Sistema Delivery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
@@ -13,11 +14,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/site-adm/barraNavegacaoSistema.css">
+    <link rel="stylesheet" href="assets/css/site-usuario/alterardados.css">
     <link rel="stylesheet" href="assets/css/site-usuario/barraNavegacao.css">
     <link rel="stylesheet" href="assets/css/site-usuario/cadastro.css">
     <link rel="stylesheet" href="assets/css/site-usuario/cardapio.css">
     <link rel="stylesheet" href="assets/css/site-usuario/carrinho.css">
     <link rel="stylesheet" href="assets/css/site-usuario/login.css">
+    <link rel="stylesheet" href="assets/css/site-usuario/meuspedidos.css">
     <link rel="stylesheet" href="assets/css/site-usuario/rodape.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -75,6 +78,25 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Nova Categoria</h1>
+                    <form id="form-nova-categoria"><label for="novacategoria">Nome da Categoria:</label><input class="form-control" type="text" name="novacategoria" required="" placeholder="Nome da nova categoria..." minlength="3" id="input-nome-categoria"><button class="btn btn-primary float-right"
+                            type="submit">Criar Categoria</button></form>
+                </div>
+                <div class="col-md-6">
+                    <h1>Novo Produto</h1>
+                    <form id="form-novo-produto"><label for="nome">Nome do Produto:</label><input class="form-control" type="text" name="nome" required="" placeholder="ex: Sashimi Salmao..." maxlength="30" minlength="1" autocomplete="on" id="input-nome-produto"><label for="descricao">Descrição:</label>
+                        <textarea
+                            class="form-control form-control-lg" rows="5" cols="43" wrap="hard" spellcheck="true" name="descricao" required="" placeholder="Adicione aqui a descrição do produto..." maxlength="300" minlength="10" autocomplete="on" id="input-descricao-produto"></textarea><label for="preco">Preço:</label><input class="form-control" type="number" name="preco" required="" placeholder="00,00" min="1" step="1" id="input-preco-produto"><label for="categoria">Categoria:</label><select class="form-control"
+                                name="categoria" required="" id="input-categoria-produto"><option value="" selected="">--Selecione uma Categoria--</option></select><label for="imagem">Imagem Produto:</label><input type="file" accept="image/*" name="imagem"
+                                required="" id="input-imagem-produto"><button class="btn btn-primary float-right" type="submit">Criar Produto</button></form>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="modal fade" role="dialog" tabindex="-1">
         <div class="modal-dialog" role="document">

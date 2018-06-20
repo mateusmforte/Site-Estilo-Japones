@@ -1,6 +1,7 @@
 var produtos = $(".produtos").find(".card-group");
 produtos.prepend(criarProduto(null,"Camarão","R$35,90","Camarão Temaki"));
-
+var cardgroup = $(".card-group .card").length;
+console.log(cardgroup);
 function criarProduto(img,titulo,preco,descricao){
     var cardProduto = $("<div></div>").addClass("card flex-wrap item-cardapio produto"); //Cria o card 
     var cardProdutoBody = $("<div></div>").addClass("card-body d-flex flex-column align-itens-center");//cria o corpo do card
@@ -66,12 +67,3 @@ function insereBtnAdicionarCarrinho(){
     btnAdicionarCarrinho.text("Adicionar ao Carrinho");
     return btnAdicionarCarrinho;
 }
-/*
-Produto
-    imagem-produto
-    titulo-produto
-    preco-produto
-    quantidade-produto
-    quantidade
-    btn-adicionar-carrinho
-*/
