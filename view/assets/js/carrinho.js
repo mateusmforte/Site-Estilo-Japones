@@ -1,28 +1,15 @@
-var carrinho = $("#carrinho").find("#tabela-pedido>table>tbody");
+var carrinho = $("#tabela-pedido>table>tbody");
 $(document).ready(function(){
     var btnAdcionaCarrinho = $(".btn-adicionar-carrinho");
     var countCarrinho = $("#qntd-carrinho");
     var btnCarrinho = $("#btn-carrinho");
+  
     btnAdcionaCarrinho.click(function(){
         adicionaProduto($(this));
+        totalPedido(buscaItensPedido());
     });
 });
-/*var carrinho = $("#carrinho").find("#tabela-pedido table");
-var nomePedido = carrinho.find(".nome-pedido");
-var qtdPedido = carrinho.find(".qtd-pedido");
-var precoPedido = carrinho.find(".qtd-preco-pedido");
-var removerItem = carrinho.find(".remover-item"); 
-console.log(carrinho);
-console.log(nomePedido.text());
-console.log(qtdPedido.text());
-console.log(precoPedido.text());
-console.log(removerItem);*/
 
-
-/*<td class="nome-pedido">Sashimi Salmão</td>
-                                    <td class="qtd-pedido">3</td>
-                                    <td class="qtd-preco-pedido">R$ 30,00</td>
-                                    <td class="remover-item"><span><i class="icon-close btn-remover-item"></i></span></td>*/
 function buildItemPedido(nomeProduto,qtdProduto,precoProduto){
     var novoItem = $("<tr></tr>");
    
@@ -39,24 +26,52 @@ function buildItemPedido(nomeProduto,qtdProduto,precoProduto){
     return carrinho;
 }
 
+function removeSifrao(texto){
+    var re =  /\d[0-9]*,\d[0-9]*/g;
+    var textoSemSifrao = re.exec(texto).toString();
+    return textoSemSifrao;
+}
 function buscaItensPedido(){
-    var carrinho = $("#carrinho").find("#tabela-pedido>table>tbody");
+    var itensCarrinho = $(carrinho).find("tr");
+    $("#lista-carrinho").hide();
+    $("#tabela-pedido").show();
+    var itens = [];
+   
+    itensCarrinho.each(function(item){
+        var qtdItem = $(this).find(".qtd-pedido").text();
+        var precoItem = removeSifrao($(this).find(".qtd-preco-pedido").text());
+        precoItem = precoItem.replace(",",".");
+        propriedadesItem = {
+            preco : precoItem,
+            qtd : qtdItem
+        };
+        itens.push(propriedadesItem);
+    });
+    return itens;
 }
 
-function totalPedido(preco,qtd){
+function totalPedido(pedido){
     var totalPedido = $("#valor-total");
-    var calculoTotal = (parseFloat(preco.replace(",",".")) * qtd);
+    var valores = [];
+    var total = 0;
+    for(var i=0; i < pedido.length; i++){
+       var multiplica = parseFloat(pedido[i].preco) * parseInt(pedido[i].qtd);
+       valores.push(multiplica);
+    }
+    for (var i=0; i<valores.length; i++){
+        total = total + valores[i];
+    }
+    total = total.toFixed(2);
+    totalPedido.text("R$"+ total.toString().replace(".",","));
     
 }
 
-function adicionaProduto(el){
+function adicionaProduto(el){ //adiciona produto ao carrinho
     var re = /\d[0-9]*,\d[0-9]*/g;
     var nomeProduto = el.parent().find(".titulo-produto");
     var qtdProduto = el.parent().find(".qtd-produto").val();
     var precoProduto = el.parent().find(".preco-produto").text();
-    var precoProdutoExp = re.exec(precoProduto).toString();
-    if(qtdProduto>0){
-        totalPedido(precoProdutoExp,qtdProduto);
-    }
+    var precoProdutoExp = removeSifrao(precoProduto);
     buildItemPedido(nomeProduto.text(),qtdProduto,precoProduto);
 }
+

@@ -94,10 +94,6 @@ input::-webkit-inner-spin-button {
   color:red;
   margin-bottom:13px;
 }
-
-.btn-categoria.active {
-}
-
 #cardapio {
   margin-bottom:33px;
 }

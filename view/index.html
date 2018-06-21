@@ -65,20 +65,7 @@
                         <div class="tab-content produtos">
                             <div class="tab-pane fade show active" role="tabpanel" id="tab-2">
                                 <div class="card-group d-inline-flex align-items-center  flex-wrap">
-                                    <div class="card flex-wrap item-cardapio produto">
-                                        <div class="card-body d-flex flex-column align-items-center">
-                                            <img class="img-fluid imagem-produto" src="assets/img/aea6de9cbaee9d2704dcf81f4a194991-754x394.jpg">
-                                            <h4 class="card-title titulo-produto">Salmão</h4>
-                                            <h5 class="preco-produto">R$45,85</h5>
-                                            <p class="card-text descricao-produto">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                            <div class="d-flex flex-column quantidade-produto"><span class="m-auto">Quantidade</span>
-                                                <div class="m-auto quantidade">
-                                                    <button class="btn btn-danger qtd-botoes qtd-remove" type="button">-</button>
-                                                    <input type="number" value="0" min="0" class="qtd-produto">
-                                                    <button class="btn btn-danger qtd-botoes qtd-add" type="button">+</button></div>
-                                            </div>
-                                            <button class="btn btn-outline-danger btn-block btn-adicionar-carrinho" type="button">Adicionar ao Carrinho</button></div>
-                                    </div> 
+                                   <!--Insere dinamicamente aqui-->
                                 </div>
                             </div>
                         </div>
@@ -118,7 +105,7 @@
                     <h4 class="modal-title">Seu Carrinho</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
                 <div class="modal-body">
                     <div id="lista-carrinho">
-                        <p class="text-center d-none" id="carrinho-vazio" style="font-size:26px;">Carrinho Vazio</p>
+                        <p class="text-center" id="carrinho-vazio" style="font-size:26px;">Carrinho Vazio</p>
                     </div>
                     <div class="table-responsive table-bordered" id="tabela-pedido">
                         <table class="table table-bordered table-hover">
@@ -131,18 +118,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="nome-pedido">Sashimi Salmão</td>
-                                    <td class="qtd-pedido">3</td>
-                                    <td class="qtd-preco-pedido">R$ 30,00</td>
-                                    <td class="remover-item"><span><i class="icon-close btn-remover-item"></i></span></td>
-                                </tr>
-                                <tr>
-                                    <td class="nome-pedido">Sashimi Salmão</td>
-                                    <td class="qtd-pedido">3</td>
-                                    <td class="qtd-preco-pedido">R$ 30,00</td>
-                                    <td class="remover-item"><span><i class="icon-close btn-remover-item"></i></span></td>
-                                </tr>
+                               <!--Insere dinammicamente os itens aqui-->
                             </tbody>
                         </table>
                     </div>
@@ -150,7 +126,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="d-flex" id="texto-total">
-                        <h3>Total:<span id="valor-total">R$0,00</span></h3>
+                        <h3>Total: <span id="valor-total">R$0,00</span></h3>
                     </div><button class="btn btn-primary" type="button" id="btn-finalizarPedido">Finalizar Pedido</button></div>
             </div>
         </div>

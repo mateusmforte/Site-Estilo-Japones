@@ -1,6 +1,3 @@
-#carrinho {
-}
-
 #cabecalho-carrinho {
   background-color:#680612;
   color:white;
@@ -27,6 +24,9 @@
   margin-right:162px;
 }
 
-.btn-remover-item {
+#lista-carrinho{
+    display: block;
 }
-
+#tabela-pedido{
+    display: none;
+}
