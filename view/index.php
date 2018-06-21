@@ -1,5 +1,6 @@
 <?php
     require_once("../controller/alerta.php");
+    require_once("../model/Clientes.php")
 ?>
 
 <!DOCTYPE html>
