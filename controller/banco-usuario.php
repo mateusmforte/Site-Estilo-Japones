@@ -10,8 +10,8 @@ function buscaUsuario($conexao, $email, $senha){
 };
 
 #Função criada para adicionar novos clientes.
-function insereUsuario($conexao, $clientes){
-	$senhaMd5 = md5($senha->getSenha());
+function insereUsuario($conexao, Clientes $clientes){
+	$senhaMd5 = md5($clientes->getSenha());
     $query = "insert into usuarios(usuario, senha) values('{$clientes->getEmail()}','{$senhaMd5}');
 				insert into clientes(nome, cpf, endereco, telefone) 
                     values('{$clientes->getNome()}', {$clientes->getCPF()},

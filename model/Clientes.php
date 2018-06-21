@@ -10,7 +10,7 @@ Class Clientes {
     private $email;
     private $telefone;
 
-    function __construct($senha,$cpf,$nome,$endereco,$email,$telefone){
+    function __construct($nome,$cpf,$endereco,$email,$senha,$telefone){
         $this->senha = $senha;
         $this->cpf = $cpf;
         $this->nome = $nome;
