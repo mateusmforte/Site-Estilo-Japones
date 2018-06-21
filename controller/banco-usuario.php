@@ -1,4 +1,5 @@
 <?php
+
 #Busca no banco de dados o login e senha do usuário para poder acessar.
 function buscaUsuario($conexao, $email, $senha){
     $senhaMd5 = md5($senha);

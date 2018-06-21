@@ -3,8 +3,6 @@ require_once("banco-usuario.php");
 require_once("conecta.php");
 require_once("../model/Clientes.php");
 
-
-
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $endereco = $_POST['endereco'];
