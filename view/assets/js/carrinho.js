@@ -1,13 +1,11 @@
 var carrinho = $("#tabela-pedido>table>tbody");
 var countCarrinho = $("#qntd-carrinho");
 var btnCarrinho = $("#btn-carrinho");
-
 $(document).ready(function(){
     var btnAdcionaCarrinho = $(".btn-adicionar-carrinho");
     btnAdcionaCarrinho.click(function(){
         adicionaProduto($(this));
         totalPedido(buscaItensPedido());
-        alteraQtdItensCarrinho("add");
     });
 });
 
@@ -20,13 +18,10 @@ function buildItemPedido(nomeProduto,qtdProduto,precoProduto){
     var removerItem = $("<td></td>").addClass("remover-item");
     var botaoRemover = $("<span></span>").append("<i></i>").addClass("icon-close btn-remover-item");
     removerItem.append(botaoRemover);
-
+   
     novoItem.append(nomeItem,qtdItem,qtdPrecoItem,removerItem);
     carrinho.append(novoItem);
-    var btnRemoveCarrinho = $(".btn-remover-item");
-    btnRemoveCarrinho.click(function(){
-        removeProduto($(this));
-    });
+    
     return carrinho;
 }
 
@@ -60,15 +55,14 @@ function totalPedido(pedido){
     var valores = [];
     var total = 0;
     for(var i=0; i < pedido.length; i++){
-       var multiplica = parseFloat(pedido[i].preco) * parseInt(pedido[i].qtd);
-       valores.push(multiplica);
-    }
-    for (var j=0; j<valores.length; j++){
-        total = total + valores[j];
-    }
-    total = total.toFixed(2);
-    totalPedido.text("R$"+ total.toString().replace(".",","));
-    
+        var multiplica = parseFloat(pedido[i].preco) * parseInt(pedido[i].qtd);
+        valores.push(multiplica);
+        }
+        for (var j=0; j<valores.length; j++){
+            total = total + valores[j];
+        }
+        total = total.toFixed(2);
+        totalPedido.text("R$"+ total.toString().replace(".",","));
 }
 
 function adicionaProduto(el){ //adiciona produto ao carrinho
@@ -76,14 +70,33 @@ function adicionaProduto(el){ //adiciona produto ao carrinho
     var qtdProduto = el.parent().find(".qtd-produto").val();
     var precoProduto = el.parent().find(".preco-produto").text();
     var precoProdutoExp = removeSifrao(precoProduto);
+    alteraQtdItensCarrinho("add");
     buildItemPedido(nomeProduto.text(),qtdProduto,precoProduto);
-    
+    $(".btn-remover-item").click(function(){
+        alteraQtdItensCarrinho("del");
+        removeProduto($(this));
+    });
+
 }
 
 function removeProduto(el){
-    item = el.parent().parent();
+    var item = el.parent().parent();
+    var itemPreco = item.find(".qtd-preco-pedido").text();
+    var itemQtd = item.find(".qtd-pedido").text();
+    
+    subtraiValorTotal(itemPreco,itemQtd);
+    
     item.remove();
-    alteraQtdItensCarrinho("del");
+}
+
+function subtraiValorTotal(itemPreco,itemQtd){
+    console.log(itemPreco,itemQtd);
+    precoItem = parseFloat(removeSifrao(itemPreco).replace(",",".")) * parseInt(itemQtd);
+    var total = parseFloat(removeSifrao($("#valor-total").text()).replace(",","."));
+    console.log(precoItem.toFixed(2));
+    console.log(total);
+    novoTotal = total - precoItem;
+    $("#valor-total").text("R$" + novoTotal.toFixed(2).toString().replace(".",","));
 }
 
 var countItemAdicionado = 0;
@@ -91,15 +104,17 @@ console.log(countItemAdicionado);
 function alteraQtdItensCarrinho(action){
     if(action == "add"){
         if(countItemAdicionado >= 0)    
-            countItemAdicionado += 1;
-            console.log(countItemAdicionado);
-            countCarrinho.text(countItemAdicionado.toString());
-    }else{
-            if(countItemAdicionado > 0)    
-            countItemAdicionado -= 1;
-            console.log(countItemAdicionado);
+            countItemAdicionado ++;
+           // console.log(countItemAdicionado);
             countCarrinho.text(countItemAdicionado.toString());
     }
-  
-
+    if(action == "del"){
+            if(countItemAdicionado > 0)    
+            countItemAdicionado -= 1;
+           // console.log(countItemAdicionado);
+            countCarrinho.text(countItemAdicionado.toString());
+    }
+    else{
+        return 0;
+    }
 }
