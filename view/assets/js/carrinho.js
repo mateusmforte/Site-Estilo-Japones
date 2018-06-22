@@ -1,12 +1,13 @@
 var carrinho = $("#tabela-pedido>table>tbody");
+var countCarrinho = $("#qntd-carrinho");
+var btnCarrinho = $("#btn-carrinho");
+
 $(document).ready(function(){
     var btnAdcionaCarrinho = $(".btn-adicionar-carrinho");
-    var countCarrinho = $("#qntd-carrinho");
-    var btnCarrinho = $("#btn-carrinho");
-  
     btnAdcionaCarrinho.click(function(){
         adicionaProduto($(this));
         totalPedido(buscaItensPedido());
+        alteraQtdItensCarrinho("add");
     });
 });
 
@@ -22,7 +23,10 @@ function buildItemPedido(nomeProduto,qtdProduto,precoProduto){
 
     novoItem.append(nomeItem,qtdItem,qtdPrecoItem,removerItem);
     carrinho.append(novoItem);
-    
+    var btnRemoveCarrinho = $(".btn-remover-item");
+    btnRemoveCarrinho.click(function(){
+        removeProduto($(this));
+    });
     return carrinho;
 }
 
@@ -31,6 +35,7 @@ function removeSifrao(texto){
     var textoSemSifrao = re.exec(texto).toString();
     return textoSemSifrao;
 }
+
 function buscaItensPedido(){
     var itensCarrinho = $(carrinho).find("tr");
     $("#lista-carrinho").hide();
@@ -58,8 +63,8 @@ function totalPedido(pedido){
        var multiplica = parseFloat(pedido[i].preco) * parseInt(pedido[i].qtd);
        valores.push(multiplica);
     }
-    for (var i=0; i<valores.length; i++){
-        total = total + valores[i];
+    for (var j=0; j<valores.length; j++){
+        total = total + valores[j];
     }
     total = total.toFixed(2);
     totalPedido.text("R$"+ total.toString().replace(".",","));
@@ -67,11 +72,34 @@ function totalPedido(pedido){
 }
 
 function adicionaProduto(el){ //adiciona produto ao carrinho
-    var re = /\d[0-9]*,\d[0-9]*/g;
     var nomeProduto = el.parent().find(".titulo-produto");
     var qtdProduto = el.parent().find(".qtd-produto").val();
     var precoProduto = el.parent().find(".preco-produto").text();
     var precoProdutoExp = removeSifrao(precoProduto);
     buildItemPedido(nomeProduto.text(),qtdProduto,precoProduto);
+    
 }
 
+function removeProduto(el){
+    item = el.parent().parent();
+    item.remove();
+    alteraQtdItensCarrinho("del");
+}
+
+var countItemAdicionado = 0;
+console.log(countItemAdicionado);
+function alteraQtdItensCarrinho(action){
+    if(action == "add"){
+        if(countItemAdicionado >= 0)    
+            countItemAdicionado += 1;
+            console.log(countItemAdicionado);
+            countCarrinho.text(countItemAdicionado.toString());
+    }else{
+            if(countItemAdicionado > 0)    
+            countItemAdicionado -= 1;
+            console.log(countItemAdicionado);
+            countCarrinho.text(countItemAdicionado.toString());
+    }
+  
+
+}
