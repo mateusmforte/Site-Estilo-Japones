@@ -26,6 +26,12 @@ input::-webkit-inner-spin-button {
   pointer-events:none;
   -webkit-user-modify:read-only;
 }
+.titulo-produto{
+    text-align: center;
+}
+.preco-produto{
+    text-align: center;
+}
 
 .qtd-produto {
   width:65px;
@@ -70,8 +76,6 @@ input::-webkit-inner-spin-button {
   background-color:rgb(224,197,103);
 }
 
-.quantidade {
-}
 
 .item-cardapio {
   /*border:red solid 1px;*/

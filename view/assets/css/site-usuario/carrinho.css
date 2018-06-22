@@ -3,7 +3,9 @@
   color:white;
   font-family:'Architects Daughter', cursive;
 }
-
+#tabela-pedido{
+  border: none;
+}
 #btn-finalizarPedido {
   background-color:transparent;
   color:#680612;

@@ -1,7 +1,9 @@
 var produtos = $(".produtos").find(".card-group");
+
 produtos.prepend(criarProduto(null,"Camarão","R$5,90","Camarão Temaki"));
 produtos.prepend(criarProduto(null,"Salmão","R$10,90","Salmão Temaki"));
 produtos.prepend(criarProduto(null,"Atum","R$5,80","Atum Temaki"));
+
 var cardgroup = $(".card-group .card").length;
 console.log(cardgroup);
 function criarProduto(img,titulo,preco,descricao){
