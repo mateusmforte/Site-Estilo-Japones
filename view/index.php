@@ -638,8 +638,8 @@
                             mostraAlerta("success");
                         ?>
                         <div class="illustration"><i class="icon ion-ios-navigate" style="color:rgb(157,0,33);"></i></div>
-                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senha"></div>
+                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email" required></div>
+                        <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senha" required></div>
                         <div class="form-group"><button class="btn btn-primary btn-block"  id="btn-login" type="submit" style="background-color:rgb(98,36,49);">Log In</button></div><a href="#" class="forgot" style="color:rgb(255,68,147);">Esqueceu sua Senha?</a>
                     </form>
                 </div>
@@ -652,13 +652,13 @@
                 <div class="modal-body" style="padding:0px;"><a class="float-right btn-close" href="#"><i class="fa fa-close float-right"></i></a>
                     <form action="..\controller\cadastroUsuario.php" method="post" id="cadastro-cliente"><!--Form de Cadastro-->
                         <h2 class="text-center"><strong>Cadastre-se</strong></h2>
-                        <div class="form-group"><input class="form-control" type="text" name="nome" placeholder="Nome Completo" id="nome"></div>
-                        <div class="form-group"><input class="form-control" type="text" name="cpf" placeholder="CPF" id="cpf"></div>
-                        <div class="form-group"><input class="form-control" type="text" name="endereco" placeholder="Endereço" id="endereco"></div>
-                        <div class="form-group"><input class="form-control" type="text" name="telefone" placeholder="Telefone" id="telefone"></div>
-                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="emailCadastro"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senhaCadastro"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="senha-repetir" placeholder="Repita a Senha" id="repetirSenha"></div>
+                        <div class="form-group"><input class="form-control" type="text" name="nome" placeholder="Nome Completo" id="nome" required></div>
+                        <div class="form-group"><input class="form-control" type="text" name="cpf" placeholder="CPF" id="cpf" required></div>
+                        <div class="form-group"><input class="form-control" type="text" name="endereco" placeholder="Endereço" id="endereco" required></div>
+                        <div class="form-group"><input class="form-control" type="text" name="telefone" placeholder="Telefone" id="telefone" required></div>
+                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="emailCadastro" required></div>
+                        <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senhaCadastro" required></div>
+                        <div class="form-group"><input class="form-control" type="password" name="senha-repetir" placeholder="Repita a Senha" id="repetirSenha" required></div>
                         <div class="form-group"><button class="btn btn-primary btn-block" type="submit" id="btn-criarconta">Criar Conta</button></div><a href="#" class="already">Ja Possui uma conta? Login</a>
                     </form>
                 </div>
