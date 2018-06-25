@@ -20,3 +20,8 @@ function insereUsuario($conexao, Clientes $clientes){
                 
     return mysqli_multi_query($conexao, $query);
 }
+
+function buscaCliente($conexao, Clientes $clientes){
+    $query = "select * from usuarios  where usuario = '{$clientes->getEmail()}' and"
+
+}
