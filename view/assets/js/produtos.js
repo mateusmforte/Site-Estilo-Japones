@@ -1,16 +1,47 @@
-var categoriasExistentes = ["temakis"];
+var categoriasExistentes = [];
 
-produtosCategoria("temakis");
-
-var btnCategoria = ($("#opcoes-cardapio").find("a")).click(function(){
-    var idCategoria = $(this).attr("id").replace("btn-","");
-
-    if (categoriasExistentes.indexOf(idCategoria) < 0) {
-        categoriasExistentes.push(idCategoria);    
-        produtosCategoria(idCategoria);
-    }
+buscaCategorias();
+categoriasExistentes.forEach(function(categoria){
+    produtosCategoria(categoria);
 });
-function produtosCategoria(categoria) {
+
+function buscaCategorias(){
+    var categorias = $("#opcoes-cardapio").find("a");
+    categorias.each(function(categoria){
+
+        var idCategoria = $(this).attr("id").replace("btn-","");    
+        if (categoriasExistentes.indexOf(idCategoria) < 0) {
+            categoriasExistentes.push(idCategoria);    
+        }
+    });
+    console.log(categoriasExistentes);
+}
+
+
+
+btnCategoria = ($("#opcoes-cardapio").find("a")).click(function(){
+    var opcao = $(this).attr("id").replace("btn-","");  
+    var produtos = $(".produtos").find("#"+opcao);
+    console.log(produtos);
+    
+    
+});
+
+function produtosCategoria(categoria){
+    var cardapio = $("#cardapio-produtos>.produtos");    
+    var tabPanel = $("<div></div>");
+    tabPanel.addClass("tab-pane fade show");
+    if(categoria == "temakis"){
+        tabPanel.addClass("active");
+    }
+    tabPanel.attr("role", "tabpanel");
+    tabPanel.attr("id",categoria);
+    tabPanel.append(criaGrupoProdutos());
+    tabPanel.append(criaGrupoProdutos());
+    cardapio.append(tabPanel);
+    return cardapio;
+}
+/*function produtosCategoria(categoria) {
     var cardapio = $("#cardapio-produtos>.produtos");    
     var tabPanel = $("<div></div>");
     tabPanel.addClass("tab-pane fade show active");
@@ -21,6 +52,7 @@ function produtosCategoria(categoria) {
             tabPanel.attr("id", categoria);
             for(var j = 0; j<2; j++){
                 tabPanel.append(criaGrupoProdutos());
+                
             }
         }else{
             return 0;
@@ -28,7 +60,7 @@ function produtosCategoria(categoria) {
     });
     cardapio.append(tabPanel);
     return cardapio;
-}
+}*/
 function criaGrupoProdutos() {
     var cardGroup = $("<div></div>");
     cardGroup.addClass("card-group d-inline-flex align-items-center flex-wrap");

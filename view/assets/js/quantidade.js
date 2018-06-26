@@ -1,14 +1,11 @@
-$(document).ready(function(){
-  var qtdAdd = $(".qtd-add");
-  var qtdRemove = $(".qtd-remove");
-  
-  
-  $(qtdAdd).on('click', function(){
-    adicionaQtd( $(this) );
-  });
-  $(qtdRemove).on('click', function(){
-    removeQtd( $(this) );
-  });
+var qtdAdd = $(".qtd-add");
+var qtdRemove = $(".qtd-remove");
+
+$(qtdAdd).on('click', function(){
+  adicionaQtd( $(this) );
+});
+$(qtdRemove).on('click', function(){
+  removeQtd( $(this) );
 });
 
 function adicionaQtd(el){
