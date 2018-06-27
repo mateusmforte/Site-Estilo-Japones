@@ -13,15 +13,15 @@ function buscaUsuario($conexao, $email, $senha){
 #Função criada para adicionar novos clientes.
 function insereUsuario($conexao, Clientes $clientes){
 	$senhaMd5 = md5($clientes->getSenha());
-    $query = "insert into usuarios(usuario, senha) values('{$clientes->getEmail()}','{$senhaMd5}');
-				insert into clientes(nome, cpf, endereco, telefone) 
-                    values('{$clientes->getNome()}', {$clientes->getCPF()},
-                        '{$clientes->getEndereco()}', {$clientes->getTelefone()})";
+    $query = "insert into usuarios(usuario, senha, cpf) values('{$clientes->getEmail()}',
+                '{$senhaMd5}', {$clientes->getCPF()});
+				    insert into clientes(nome, cpf, endereco, telefone) 
+                        values('{$clientes->getNome()}', {$clientes->getCPF()},
+                            '{$clientes->getEndereco()}', {$clientes->getTelefone()})";
                 
     return mysqli_multi_query($conexao, $query);
 }
 
 function buscaCliente($conexao, Clientes $clientes){
-    $query = "select * from usuarios  where usuario = '{$clientes->getEmail()}' and"
-
+    $query = "select * from usuarios where usuario = '{$clientes->getEmail()}'";
 }

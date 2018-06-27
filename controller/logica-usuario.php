@@ -1,4 +1,7 @@
 <?php
+require_once("../model/Clientes.php");
+require_once("banco-usuario.php");
+
 session_start();
 
 function usuarioEstaLogado(){
@@ -26,7 +29,7 @@ function logout() {
     session_start();
 }
 
-function verificaCadastro($post){
+function verificaCadastro($conexao, $post){
 	$valido = True;
 	$campos = array('nome','cpf','endereco','telefone','email','senha');
 	foreach ($campos as $campo){ 
@@ -62,5 +65,5 @@ function verificaCadastro($post){
 				<p class="text-danger">Usuário não cadastrado <?= $msg?></p>
 		<?php
 			}
-		}
+	}
 }
