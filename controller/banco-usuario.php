@@ -22,8 +22,9 @@ function insereUsuario($conexao, Clientes $clientes){
     return mysqli_multi_query($conexao, $query);
 }
 
-function procuraUsuario($conexao, $cpf){
-    $query = "select * from usuarios where cliente_cpf = {$cpf})";
+function procuraCliente($conexao, $cpf){
+    $query = "select * from clientes where cpf = {$cpf}";
     $resultado = mysqli_query($conexao, $query);
-    return $resultado;
+    $rows = mysqli_num_rows($resultado);
+    return $rows;   
 }

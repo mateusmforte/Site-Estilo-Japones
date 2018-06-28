@@ -32,9 +32,8 @@ function logout() {
 function verificaCadastro($conexao, $post){
 	$valido = True;
 	$campos = array('nome','cpf','endereco','telefone','email','senha');
-	$resultado = procuraUsuario($conexao,$post['cpf']);
-	echo $resultado . "<br>";
-	if (!empty($resultado)){?>
+	$resultado = procuraCliente($conexao, $post['cpf']);
+	if ($resultado > 0){?>
 		<p>Usuario já existe</p>
 	<?php
 	}
