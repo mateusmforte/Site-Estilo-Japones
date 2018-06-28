@@ -1,7 +1,25 @@
 var modalCadastro = $("#cadastro-modal");
+
+var nome = $("#nome");
+
+var cpf = $("#cpf");
+var cpfInvalido = $("#cpf-invalido");
+
+var endereco = $("#endereco");
+
+var telefone = $("#telefone");
+var telefoneInvalido = $("telefone-invalido");
+
+var email = $("#email");
+
+var senha = $("#senha");
+var repetirSenha = $("#repetirSenha");
+
 $(function(){
-    $("#cpf").mask('000.000.000-00');
+    cpf.mask('000.000.000-00');
+    telefone.mask('(00) 90000-0000');
 });
+
 $("#btn-cadastro").click(function(){
      modalCadastro.modal();
 });
@@ -12,14 +30,47 @@ $(".btn-close").click(function(){
 
 var btnCadastrar = $("#btn-criarconta");
 btnCadastrar.click(function(){
-    var cpf = $("#cpf").val();    
-    if(TestaCPF(cpf)){
+
+    verificaCampoVazio(nome);
+    verificaCampoVazio(cpf);
+    verificaCampoVazio(endereco);
+    verificaCampoVazio(telefone);
+    verificaCampoVazio(email);
+    verificaCampoVazio(senha);
+    verificaCampoVazio(repetirSenha);
+
+    strCpf = cpf.cleanVal(); 
+    strTelefone = telefone.cleanVal();
+    
+    if(TestaCPF(strCpf)){
         $("#cpf").css("border-color","green");
+        $("#cpf-invalido").hide();
     }else{
-        $("#cpf-invalido").toggle();
         $("#cpf").css("border-color","red");
+        $("#cpf-invalido").show();
+    }
+
+    if(TestaTelefone(strTelefone)){
+        telefone.css("border-color","green");
+    }else{
+        telefone.css("border-color","red");
     }
 });
+
+function verificaCampoVazio(campo){    
+    if(campo.length == 1 | campo.length == 0){
+        campo.css("border-color","yellow");
+    }else{
+        return false;
+    }
+}
+function TestaTelefone(strTelefone){
+    if(strTelefone.length == 11 ||  strTelefone.length == 10){
+        return true;
+    }else{
+        return false;
+    }
+}
 function TestaCPF(strCPF) {
     var Soma;
     var Resto;

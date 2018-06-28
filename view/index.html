@@ -134,8 +134,8 @@
                     <form method="post" id="login-cliente">
                         <h2 class="sr-only">Login Form</h2>
                         <div class="illustration"><i class="icon ion-ios-navigate" style="color:rgb(157,0,33);"></i></div>
-                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senha"></div>
+                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email" required></div>
+                        <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senha" required></div>
                         <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(98,36,49);">Log In</button></div><a href="#" class="forgot" style="color:rgb(255,68,147);">Esqueceu sua Senha?</a></form>
                 </div>
             </div>
@@ -146,18 +146,38 @@
             <div class="modal-content">
                 <div class="modal-body" style="padding:0px;"><a class="float-right btn-close" href="#"><i class="fa fa-close float-right"></i></a>
                     <form method="post" id="cadastro-cliente">
-                        <h2 class="text-center"><strong>Cadastre-se</strong></h2>
-                        <div class="form-group"><input class="form-control" type="text" name="nome" placeholder="Nome Completo" id="nome"></div>
+                        <h2 class="text-center">
+                            <strong>Cadastre-se</strong>
+                        </h2>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="cpf" placeholder="CPF" data-mask="000.000.000-00" id="cpf">
-                            <p id="cpf-invalido" style="display: none">CPF Inválido</p>
+                            <input class="form-control" type="text" name="nome" placeholder="Nome Completo" id="nome" required>
                         </div>
-                        <div class="form-group"><input class="form-control" type="text" name="endereco" placeholder="Endereço" id="endereco"></div>
-                        <div class="form-group"><input class="form-control" type="text" name="telefone" placeholder="Telefone" data-mask="(00)90000-0000" id="telefone"></div>
-                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" id="email"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="senha" placeholder="Senha" id="senha"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="senha-repetir" placeholder="Repita a Senha" id="repetirSenha"></div>
-                        <div class="form-group"><button class="btn btn-primary btn-block"  type="button" id="btn-criarconta">Criar Conta</button></div><a href="#" class="already">Ja Possui uma conta? Login</a>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="cpf" placeholder="CPF" data-mask="000.000.000-00" pattern="\d{3}.\d{3}\d{3}\-\d{2}"
+                                id="cpf" required>
+                            <p id="cpf-invalido" style="display: none">CPF Inválido!</p>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="endereco" placeholder="Endereço" id="endereco" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="telefone" placeholder="Telefone" data-mask="(00)90000-0000" pattern="\(\d{2}\)\d?\d{4}\-\d{4}"
+                                id="telefone" required>
+                             <p id="telefone-invalido" style="display: none">Telefone Inválido! Favor insira um telefone Válido</p>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email" placeholder="Email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" name="senha" placeholder="Senha" id="senha" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" name="senha-repetir" placeholder="Repita a Senha" id="repetirSenha" required>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block" type="submit" id="btn-criarconta">Criar Conta</button>
+                        </div>
+                        <a href="#" class="already">Ja Possui uma conta? Login</a>
                     </form>
                 </div>
             </div>
@@ -171,6 +191,7 @@
     <script src="assets/js/quantidade.js"></script>
     <script src="assets/js/login.js"></script>
     <script src="assets/js/carrinho.js"></script>
+    <script src="assets/js/libs/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
  
     
 </body>
