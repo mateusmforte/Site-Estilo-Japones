@@ -39,10 +39,10 @@ btnCadastrar.click(function(){
     verificaCampoVazio(senha);
     verificaCampoVazio(repetirSenha);
 
-    strCpf = cpf.cleanVal(); 
+   //strCpf = cpf.cleanVal(); 
     strTelefone = telefone.cleanVal();
     
-    if(TestaCPF(strCpf)){
+    if(CPF.validate(cpf.val())){
         $("#cpf").css("border-color","green");
         $("#cpf-invalido").hide();
     }else{

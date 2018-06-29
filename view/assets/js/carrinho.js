@@ -14,9 +14,14 @@ function adicionaProduto(el){ //adiciona produto ao carrinho
     var nomeProduto = el.parent().find(".titulo-produto");
     var qtdProduto = el.parent().find(".qtd-produto").val();
     var precoProduto = el.parent().find(".preco-produto").text();
- 
-    alteraQtdItensCarrinho("add");
-    buildItemPedido(nomeProduto.text(),qtdProduto,precoProduto);
+    
+    if(qtdProduto == 0){
+        alert("Insira ao menos 1 produto");
+    }else{
+        alteraQtdItensCarrinho("add");
+        buildItemPedido(nomeProduto.text(),qtdProduto,precoProduto);
+    }
+   
 }
 
 function buildItemPedido(nomeProduto,qtdProduto,precoProduto){//cria a linha na tabela contendo as informações sobre o pedido
