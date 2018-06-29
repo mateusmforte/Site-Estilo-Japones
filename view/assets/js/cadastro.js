@@ -3,17 +3,18 @@ var modalCadastro = $("#cadastro-modal");
 var nome = $("#nome");
 
 var cpf = $("#cpf");
-var cpfInvalido = $("#cpf-invalido");
+var cpfInvalido =$("#cpfInvalido");
 
 var endereco = $("#endereco");
 
 var telefone = $("#telefone");
-var telefoneInvalido = $("telefone-invalido");
+var telefoneInvalido = $("#telefone-invalido");
 
-var email = $("#email");
+var email = $("#emailCadastro");
 
-var senha = $("#senha");
+var senha = $("#senhaCadastro");
 var repetirSenha = $("#repetirSenha");
+var senhaIncompativel = $("#senhaIncompativel");
 
 $(function(){
     cpf.mask('000.000.000-00');
@@ -27,10 +28,22 @@ $(".btn-close").click(function(){
 
     modalCadastro.modal("hide"); 
 });
+repetirSenha.on("input", function() {
+    var senhaDigitada = senha.val();
+    var digitado = repetirSenha.val();
+    var comparavel = senhaDigitada.substr(0, digitado.length);
+
+    if (digitado == comparavel) {
+        repetirSenha.css("border-color","green");
+        senhaIncompativel.hide();
+    } else {
+        repetirSenha.css("border-color","red");
+        senhaIncompativel.show();
+    }
+});
 
 var btnCadastrar = $("#btn-criarconta");
 btnCadastrar.click(function(){
-
     verificaCampoVazio(nome);
     verificaCampoVazio(cpf);
     verificaCampoVazio(endereco);
@@ -42,18 +55,27 @@ btnCadastrar.click(function(){
    //strCpf = cpf.cleanVal(); 
     strTelefone = telefone.cleanVal();
     
+    
     if(CPF.validate(cpf.val())){
-        $("#cpf").css("border-color","green");
-        $("#cpf-invalido").hide();
+       cpf.css("border-color","green");
+       cpfInvalido.hide();
     }else{
-        $("#cpf").css("border-color","red");
-        $("#cpf-invalido").show();
+       cpf.css("border-color","red");
+       cpfInvalido.show();
+       return false;
     }
 
-    if(TestaTelefone(strTelefone)){
+    if(testaTelefone(strTelefone)){
         telefone.css("border-color","green");
+        telefoneInvalido.hide();
     }else{
         telefone.css("border-color","red");
+        telefoneInvalido.show();
+        return false;
+    }
+
+    if(senha.val() != repetirSenha.val()){
+        return false;
     }
 });
 
@@ -64,7 +86,7 @@ function verificaCampoVazio(campo){
         return false;
     }
 }
-function TestaTelefone(strTelefone){
+function testaTelefone(strTelefone){
     if(strTelefone.length == 11 ||  strTelefone.length == 10){
         return true;
     }else{
